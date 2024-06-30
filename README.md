@@ -124,7 +124,7 @@ Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos com
 Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
 
 • Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
-``sql
+```
    +-------------------+      +-------------------+      +------------------+
    |   Metodos_Pago    |      | Categorias_Product |      |    Proveedores   |
    +-------------------+      +-------------------+      +------------------+
