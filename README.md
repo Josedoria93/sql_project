@@ -14,24 +14,27 @@ Desafíos Actuales
 ________________________________________
 Solución Propuesta: Implementación de una Base de Datos Relacional
 Para abordar estos desafíos de manera efectiva, se propone la implementación de una base de datos relacional que incluya las siguientes entidades principales y relaciones:
+
 1.	Entidades Principales:
-Productos: Para mantener un registro detallado de cada producto, incluyendo descripción, precio, stock y detalles históricos de precios.
-Clientes: Para gestionar información detallada de clientes, incluyendo historial de compras, preferencias y feedback.
-Ventas y Compras: Para registrar transacciones de venta y compra, incluyendo detalles como fechas, cantidades y métodos de pago.
-Proveedores: Para gestionar datos de proveedores, incluyendo detalles de contacto y registros de transacciones de compra.
-Empleados: Para mantener información sobre el personal, incluyendo roles, fechas de inicio y registros de transacciones internas.
-Opiniones y Feedback de Clientes: Para capturar comentarios y calificaciones de clientes sobre productos y servicios.
+• Productos: Para mantener un registro detallado de cada producto, incluyendo descripción, precio, stock y detalles históricos de precios.
+• Clientes: Para gestionar información detallada de clientes, incluyendo historial de compras, preferencias y feedback.
+• Ventas y Compras: Para registrar transacciones de venta y compra, incluyendo detalles como fechas, cantidades y métodos de pago.
+• Proveedores: Para gestionar datos de proveedores, incluyendo detalles de contacto y registros de transacciones de compra.
+• Empleados: Para mantener información sobre el personal, incluyendo roles, fechas de inicio y registros de transacciones internas.
+• Opiniones y Feedback de Clientes: Para capturar comentarios y calificaciones de clientes sobre productos y servicios.
+
 2.	Relaciones Clave:
-Relaciones entre productos y categorías para la organización eficiente del inventario.
-Relaciones entre ventas y clientes para análisis de comportamiento de compra y gestión de CRM.
-Relaciones entre compras y proveedores para seguimiento de rendimiento de proveedores y gestión de cadena de suministro.
-Relaciones entre empleados y transacciones internas para seguimiento de actividades y responsabilidades.
+• Relaciones entre productos y categorías para la organización eficiente del inventario.
+• Relaciones entre ventas y clientes para análisis de comportamiento de compra y gestión de CRM.
+• Relaciones entre compras y proveedores para seguimiento de rendimiento de proveedores y gestión de cadena de suministro.
+• Relaciones entre empleados y transacciones internas para seguimiento de actividades y responsabilidades.
+
 3.	Funcionalidades Clave:
-Análisis de Inventarios: Seguimiento en tiempo real del stock de productos y análisis de rotación de inventarios.
-Análisis de Ventas: Identificación de productos más vendidos, análisis de rentabilidad por producto y predicción de demanda.
-Gestión de Clientes: Seguimiento de preferencias de compra, gestión de lealtad y segmentación de clientes.
-Optimización de Proveedores: Evaluación de rendimiento de proveedores, análisis de costos y gestión de calidad.
-Análisis de Feedback de Clientes: Identificación de áreas de mejora en servicio al cliente y ajuste de estrategias de marketing.
+• Análisis de Inventarios: Seguimiento en tiempo real del stock de productos y análisis de rotación de inventarios.
+• Análisis de Ventas: Identificación de productos más vendidos, análisis de rentabilidad por producto y predicción de demanda.
+• Gestión de Clientes: Seguimiento de preferencias de compra, gestión de lealtad y segmentación de clientes.
+• Optimización de Proveedores: Evaluación de rendimiento de proveedores, análisis de costos y gestión de calidad.
+• Análisis de Feedback de Clientes: Identificación de áreas de mejora en servicio al cliente y ajuste de estrategias de marketing.
 ________________________________________
 Explicación de las tablas:
 1. Metodos_Pago:
@@ -120,7 +123,7 @@ Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos com
 
 Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
 
-Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
+• Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
 
    +-------------------+      +-------------------+      +------------------+
    |   Metodos_Pago    |      | Categorias_Product |      |    Proveedores   |
