@@ -1,42 +1,42 @@
 # README
 Primera entrega CoderHouse
-Problema a Resolver: Optimización y Gestión Integral de Operaciones en una Ferretería
+# Problema a Resolver: Optimización y Gestión Integral de Operaciones en una Ferretería
 ________________________________________
-Introducción
+## Introducción
 Una ferretería enfrenta múltiples desafíos operativos y estratégicos que requieren una gestión eficiente de datos para mejorar la rentabilidad, satisfacción del cliente y eficiencia operativa. La implementación de una base de datos bien estructurada juega un papel crucial en abordar estas problemáticas, proporcionando una plataforma centralizada para la gestión y análisis de datos críticos.
 ________________________________________
-Desafíos Actuales
+## Desafíos Actuales
 1.	Gestión de Inventarios: La falta de un sistema centralizado dificulta el seguimiento preciso del inventario de productos. Esto conlleva a problemas como excesos o faltantes de stock, afectando la capacidad de respuesta ante la demanda y generando costos innecesarios por almacenamiento excesivo o pérdida de ventas por falta de productos.
 2.	Gestión de Clientes y CRM: La gestión manual de la información de clientes limita la capacidad de la ferretería para ofrecer servicios personalizados, gestionar eficientemente las relaciones con los clientes y aprovechar oportunidades de venta cruzada o upselling.
 3.	Optimización de Ventas y Rentabilidad: La falta de datos estructurados sobre las ventas, incluyendo análisis de productos más vendidos, rentabilidad por producto y tendencias de ventas, impide la toma de decisiones estratégicas fundamentadas para maximizar los ingresos y optimizar los márgenes de beneficio.
 4.	Gestión de Proveedores y Cadena de Suministro: La falta de visibilidad sobre la relación con los proveedores y los costos de adquisición de productos afecta la capacidad de la ferretería para negociar mejores términos, gestionar la calidad del suministro y optimizar los tiempos de entrega.
 5.	Análisis de Opiniones y Feedback de Clientes: La retroalimentación de los clientes no se gestiona de manera estructurada, lo que dificulta la identificación de áreas de mejora en el servicio al cliente y la reputación de la marca.
 ________________________________________
-Solución Propuesta: Implementación de una Base de Datos Relacional
+## Solución Propuesta: Implementación de una Base de Datos Relacional
 Para abordar estos desafíos de manera efectiva, se propone la implementación de una base de datos relacional que incluya las siguientes entidades principales y relaciones:
 
 1.	Entidades Principales:
-• Productos: Para mantener un registro detallado de cada producto, incluyendo descripción, precio, stock y detalles históricos de precios.
-• Clientes: Para gestionar información detallada de clientes, incluyendo historial de compras, preferencias y feedback.
-• Ventas y Compras: Para registrar transacciones de venta y compra, incluyendo detalles como fechas, cantidades y métodos de pago.
-• Proveedores: Para gestionar datos de proveedores, incluyendo detalles de contacto y registros de transacciones de compra.
-• Empleados: Para mantener información sobre el personal, incluyendo roles, fechas de inicio y registros de transacciones internas.
-• Opiniones y Feedback de Clientes: Para capturar comentarios y calificaciones de clientes sobre productos y servicios.
+* Productos: Para mantener un registro detallado de cada producto, incluyendo descripción, precio, stock y detalles históricos de precios.
+* Clientes: Para gestionar información detallada de clientes, incluyendo historial de compras, preferencias y feedback.
+* Ventas y Compras: Para registrar transacciones de venta y compra, incluyendo detalles como fechas, cantidades y métodos de pago.
+* Proveedores: Para gestionar datos de proveedores, incluyendo detalles de contacto y registros de transacciones de compra.
+* Empleados: Para mantener información sobre el personal, incluyendo roles, fechas de inicio y registros de transacciones internas.
+* Opiniones y Feedback de Clientes: Para capturar comentarios y calificaciones de clientes sobre productos y servicios.
 
 2.	Relaciones Clave:
-• Relaciones entre productos y categorías para la organización eficiente del inventario.
-• Relaciones entre ventas y clientes para análisis de comportamiento de compra y gestión de CRM.
-• Relaciones entre compras y proveedores para seguimiento de rendimiento de proveedores y gestión de cadena de suministro.
-• Relaciones entre empleados y transacciones internas para seguimiento de actividades y responsabilidades.
+* Relaciones entre productos y categorías para la organización eficiente del inventario.
+* Relaciones entre ventas y clientes para análisis de comportamiento de compra y gestión de CRM.
+* Relaciones entre compras y proveedores para seguimiento de rendimiento de proveedores y gestión de cadena de suministro.
+* Relaciones entre empleados y transacciones internas para seguimiento de actividades y responsabilidades.
 
 3.	Funcionalidades Clave:
-• Análisis de Inventarios: Seguimiento en tiempo real del stock de productos y análisis de rotación de inventarios.
-• Análisis de Ventas: Identificación de productos más vendidos, análisis de rentabilidad por producto y predicción de demanda.
-• Gestión de Clientes: Seguimiento de preferencias de compra, gestión de lealtad y segmentación de clientes.
-• Optimización de Proveedores: Evaluación de rendimiento de proveedores, análisis de costos y gestión de calidad.
-• Análisis de Feedback de Clientes: Identificación de áreas de mejora en servicio al cliente y ajuste de estrategias de marketing.
+* Análisis de Inventarios: Seguimiento en tiempo real del stock de productos y análisis de rotación de inventarios.
+* Análisis de Ventas: Identificación de productos más vendidos, análisis de rentabilidad por producto y predicción de demanda.
+* Gestión de Clientes: Seguimiento de preferencias de compra, gestión de lealtad y segmentación de clientes.
+* Optimización de Proveedores: Evaluación de rendimiento de proveedores, análisis de costos y gestión de calidad.
+* Análisis de Feedback de Clientes: Identificación de áreas de mejora en servicio al cliente y ajuste de estrategias de marketing.
 ________________________________________
-Explicación de las tablas:
+## Explicación de las tablas:
 1. Metodos_Pago:
 Esta tabla almacena los métodos de pago aceptados en la ferretería.
 ID_Metodo: Identificador único del método de pago.
@@ -123,7 +123,7 @@ Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos com
 
 Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
 
-• Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
+* Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
 ```
    +-------------------+      +-------------------+      +------------------+
    |   Metodos_Pago    |      | Categorias_Product |      |    Proveedores   |
@@ -187,12 +187,12 @@ Estas tablas están diseñadas para capturar de manera estructurada todos los as
    +--------------------------+---------------------------+---------------+-----+
    ```
 ________________________________________
-Beneficios Esperados
-•	Mejora en la precisión y eficiencia en la gestión de inventarios.
-•	Mejora en la satisfacción y retención de clientes a través de un mejor servicio y personalización.
-•	Optimización de procesos internos y reducción de costos operativos.
-•	Mejora en la rentabilidad a través de decisiones estratégicas basadas en datos.
-•	Mejora en la reputación de la marca y fidelización de clientes a través de un mejor servicio y productos adaptados a sus necesidades.
+## Beneficios Esperados
+* Mejora en la precisión y eficiencia en la gestión de inventarios.
+* Mejora en la satisfacción y retención de clientes a través de un mejor servicio y personalización.
+* Optimización de procesos internos y reducción de costos operativos.
+* Mejora en la rentabilidad a través de decisiones estratégicas basadas en datos.
+* Mejora en la reputación de la marca y fidelización de clientes a través de un mejor servicio y productos adaptados a sus necesidades.
 ________________________________________
-Conclusión
+## Conclusión
 La implementación de una base de datos relacional adaptada a las necesidades específicas de una ferretería no solo resolverá los desafíos actuales, sino que también proporcionará una plataforma robusta para la toma de decisiones informadas y la optimización continua de procesos. Esto posicionará a la ferretería para competir eficazmente en un mercado dinámico y responder proactivamente a las demandas cambiantes de los clientes y condiciones del mercado.
