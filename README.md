@@ -38,97 +38,97 @@ Para abordar estos desafíos de manera efectiva, se propone la implementación d
 ________________________________________
 ## Explicación de las tablas:
 1. Metodos_Pago:
-Esta tabla almacena los métodos de pago aceptados en la ferretería.
-ID_Metodo: Identificador único del método de pago.
-Nombre: Nombre descriptivo del método de pago.
+* Esta tabla almacena los métodos de pago aceptados en la ferretería.
+* ID_Metodo: Identificador único del método de pago.
+* Nombre: Nombre descriptivo del método de pago.
 
 2. Categorias_Productos:
-Contiene las categorías de productos disponibles.
-ID_Categoria: Identificador único de la categoría.
-Nombre: Nombre de la categoría.
-Descripcion: Descripción opcional de la categoría.
+* Contiene las categorías de productos disponibles.
+* ID_Categoria: Identificador único de la categoría.
+* Nombre: Nombre de la categoría.
+* Descripcion: Descripción opcional de la categoría.
 
 3. Proveedores:
-Registra la información de los proveedores de la ferretería.
-ID_Proveedor: Identificador único del proveedor.
-Nombre: Nombre del proveedor.
-Direccion, Correo_Electronico, Telefono: Detalles de contacto del proveedor.
+* Registra la información de los proveedores de la ferretería.
+* ID_Proveedor: Identificador único del proveedor.
+* Nombre: Nombre del proveedor.
+* Direccion, Correo_Electronico, Telefono: Detalles de contacto del proveedor.
 
 4. Clientes:
-Almacena los datos de los clientes de la ferretería.
-ID_Cliente: Identificador único del cliente.
-Nombre, Correo_Electronico, Direccion, Telefono: Información de contacto del cliente.
+* Almacena los datos de los clientes de la ferretería.
+* ID_Cliente: Identificador único del cliente.
+* Nombre, Correo_Electronico, Direccion, Telefono: Información de contacto del cliente.
 
 5.Empleados:
-Contiene la información de los empleados de la ferretería.
-ID_Empleado: Identificador único del empleado.
-Nombre, Rol, Fecha_Inicio, Salario: Detalles personales y laborales del empleado.
+* Contiene la información de los empleados de la ferretería.
+* ID_Empleado: Identificador único del empleado.
+* Nombre, Rol, Fecha_Inicio, Salario: Detalles personales y laborales del empleado.
 
 6.Productos:
-Registra los productos disponibles en la ferretería.
-ID_Producto: Identificador único del producto.
-Nombre, Descripcion, Precio, Stock: Detalles del producto y su disponibilidad.
-Fecha_Creacion, Ultima_Actualizacion: Registra las fechas de creación y última modificación del producto.
+* Registra los productos disponibles en la ferretería.
+* ID_Producto: Identificador único del producto.
+* Nombre, Descripcion, Precio, Stock: Detalles del producto y su disponibilidad.
+* Fecha_Creacion, Ultima_Actualizacion: Registra las fechas de creación y última modificación del producto.
 
 7. Ventas:
-Guarda la información de las ventas realizadas.
-ID_Venta: Identificador único de la venta.
-Fecha: Fecha en que se realizó la venta.
-ID_Producto, ID_Cliente: Referencias a productos vendidos y clientes involucrados.
-Precio_Total, ID_Metodo: Monto total de la venta y método de pago utilizado.
+* Guarda la información de las ventas realizadas.
+* ID_Venta: Identificador único de la venta.
+* Fecha: Fecha en que se realizó la venta.
+* ID_Producto, ID_Cliente: Referencias a productos vendidos y clientes involucrados.
+* Precio_Total, ID_Metodo: Monto total de la venta y método de pago utilizado.
 
 8. Compras:
-Almacena los registros de las compras realizadas a los proveedores.
-ID_Compra: Identificador único de la compra.
-Fecha: Fecha de la compra.
-ID_Producto, ID_Proveedor: Productos comprados y proveedores involucrados.
-Precio_Unitario: Precio unitario de cada producto comprado.
+* Almacena los registros de las compras realizadas a los proveedores.
+* ID_Compra: Identificador único de la compra.
+* Fecha: Fecha de la compra.
+* ID_Producto, ID_Proveedor: Productos comprados y proveedores involucrados.
+* Precio_Unitario: Precio unitario de cada producto comprado.
 
 9. Productos_Categorias:
-Establece la relación entre los productos y sus categorías correspondientes.
-ID_Productos_Categorias: Identificador único de la relación.
-ID_Producto, ID_Categoria: Referencias a productos y categorías.
+* Establece la relación entre los productos y sus categorías correspondientes.
+* ID_Productos_Categorias: Identificador único de la relación.
+* ID_Producto, ID_Categoria: Referencias a productos y categorías.
 
 10. Detalles_Ventas:
-Contiene los detalles específicos de cada venta realizada.
-ID_Detalle: Identificador único del detalle de venta.
-ID_Venta, ID_Producto: Referencias a la venta y producto vendido.
-Cantidad, Precio_Unitario: Cantidad vendida y precio unitario del producto.
+* Contiene los detalles específicos de cada venta realizada.
+* ID_Detalle: Identificador único del detalle de venta.
+* ID_Venta, ID_Producto: Referencias a la venta y producto vendido.
+* Cantidad, Precio_Unitario: Cantidad vendida y precio unitario del producto.
 
 11. Historial_Precios:
-Registra los cambios de precios de los productos a lo largo del tiempo.
-ID_Historial: Identificador único del registro de historial.
-ID_Producto: Producto asociado al cambio de precio.
-Fecha_Cambio, Precio_Anterior, Precio_Nuevo: Fechas y valores del precio anterior y nuevo.
-Razon_Cambio: Razón o evento que causó el cambio de precio.
+* Registra los cambios de precios de los productos a lo largo del tiempo.
+* ID_Historial: Identificador único del registro de historial.
+* ID_Producto: Producto asociado al cambio de precio.
+* Fecha_Cambio, Precio_Anterior, Precio_Nuevo: Fechas y valores del precio anterior y nuevo.
+* Razon_Cambio: Razón o evento que causó el cambio de precio.
 
 12. Transacciones_Inventario:
-Mantiene un registro de las transacciones que afectan el inventario de productos.
-ID_Transaccion: Identificador único de la transacción.
-Tipo_Transaccion: Tipo de operación realizada (entrada o salida).
-Fecha: Fecha de la transacción.
-ID_Producto, Cantidad_Afectada, Id_Empleado: Producto afectado, cantidad implicada y empleado responsable.
-Motivo: Razón o descripción de la transacción.
+* Mantiene un registro de las transacciones que afectan el inventario de productos.
+* ID_Transaccion: Identificador único de la transacción.
+* Tipo_Transaccion: Tipo de operación realizada (entrada o salida).
+* Fecha: Fecha de la transacción.
+* ID_Producto, Cantidad_Afectada, Id_Empleado: Producto afectado, cantidad implicada y empleado responsable.
+* Motivo: Razón o descripción de la transacción.
 
 13. Opiniones_Clientes:
-Almacena las opiniones y feedback de los clientes sobre los productos.
-ID_Opinion: Identificador único de la opinión.
-ID_Cliente, Fecha, Calificacion, Comentario, Producto_Evaluado: Detalles de la opinión del cliente.
+* Almacena las opiniones y feedback de los clientes sobre los productos.
+* ID_Opinion: Identificador único de la opinión.
+* ID_Cliente, Fecha, Calificacion, Comentario, Producto_Evaluado: Detalles de la opinión del cliente.
 
 14. Historial_Clientes:
-Registra el historial de transacciones de los clientes.
-ID_Registro: Identificador único del registro.
-ID_Cliente, Fecha_Transaccion, Tipo_Transaccion: Cliente involucrado, fecha y tipo de transacción.
-Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos comprados por el cliente.
+* Registra el historial de transacciones de los clientes.
+* ID_Registro: Identificador único del registro.
+* ID_Cliente, Fecha_Transaccion, Tipo_Transaccion: Cliente involucrado, fecha y tipo de transacción.
+* Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos comprados por el cliente.
 
 15. Detalles_Compra:
-ID_Detalle_Compra: Clave primaria autoincremental.
-ID_Compra: ID de la compra asociada.
-ID_Producto: ID del producto comprado.
-ID_Proveedor: ID del proveedor del cual se compró el producto.
-Cantidad: Cantidad comprada del producto.
-Precio_Unitario: Precio unitario del producto comprado.
-Llaves foráneas que vinculan ID_Compra a Compras, ID_Producto a Productos, e ID_Proveedor a Proveedores.
+* ID_Detalle_Compra: Clave primaria autoincremental.
+* ID_Compra: ID de la compra asociada.
+* ID_Producto: ID del producto comprado.
+* ID_Proveedor: ID del proveedor del cual se compró el producto.
+* Cantidad: Cantidad comprada del producto.
+* Precio_Unitario: Precio unitario del producto comprado.
+* Llaves foráneas que vinculan ID_Compra a Compras, ID_Producto a Productos, e ID_Proveedor a Proveedores.
 
 Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
 
