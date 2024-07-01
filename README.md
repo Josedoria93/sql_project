@@ -218,6 +218,8 @@ En este diagrama:
 * Las líneas conectan las claves foráneas (FK) en las tablas que referencian a las claves primarias (PK) de otras tablas.
 * Por ejemplo, Ventas.ID_Producto (FK) se relaciona con Productos.ID_Producto (PK).
 * Las tablas Productos_Categorias, Detalles_Ventas, Transacciones_Inventario, Detalles_Compras, Opiniones_Clientes, y Historial_Clientes tienen claves foráneas que apuntan a las claves primarias de otras tablas, estableciendo así las relaciones en la base de datos.
+
+![alt text](<Modelo E-R.png>)
 ________________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
