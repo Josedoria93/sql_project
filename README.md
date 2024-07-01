@@ -122,7 +122,13 @@ ID_Cliente, Fecha_Transaccion, Tipo_Transaccion: Cliente involucrado, fecha y ti
 Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos comprados por el cliente.
 
 15. Detalles_Compra:
-
+ID_Detalle_Compra: Clave primaria autoincremental.
+ID_Compra: ID de la compra asociada.
+ID_Producto: ID del producto comprado.
+ID_Proveedor: ID del proveedor del cual se compró el producto.
+Cantidad: Cantidad comprada del producto.
+Precio_Unitario: Precio unitario del producto comprado.
+Llaves foráneas que vinculan ID_Compra a Compras, ID_Producto a Productos, e ID_Proveedor a Proveedores.
 
 Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
 
