@@ -121,71 +121,97 @@ ID_Registro: Identificador único del registro.
 ID_Cliente, Fecha_Transaccion, Tipo_Transaccion: Cliente involucrado, fecha y tipo de transacción.
 Total_Gastado, Productos_Comprados: Monto total gastado y lista de productos comprados por el cliente.
 
+15. Detalles_Compra:
+
+
 Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
 
 * Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
 ```
-   +-------------------+      +-------------------+      +------------------+
-   |   Metodos_Pago    |      | Categorias_Product |      |    Proveedores   |
-   +-------------------+      +-------------------+      +------------------+
-   | ID_Metodo (PK)    |      | ID_Categoria (PK)  |      | ID_Proveedor (PK)|
-   | Nombre            |      | Nombre             |      | Nombre           |
-   |                   |      | Descripcion        |      | Direccion        |
-   +-------------------+      +-------------------+      | Correo_Electron. |
-         |                                                 | Telefono         |
-         |                                                 +------------------+
-         |                                                         |
-         |                                                         |
-         |                                                         |
-         |                                                         |
-   +-------------------+      +-------------------+      +------------------+
-   |     Clientes      |      |     Empleados     |      |     Productos    |
-   +-------------------+      +-------------------+      +------------------+
-   | ID_Cliente (PK)   |      | ID_Empleado (PK)  |      | ID_Producto (PK) |
-   | Nombre            |      | Nombre            |      | Nombre           |
-   | Correo_Electron.  |      | Rol               |      | Descripcion      |
-   | Direccion         |      | Fecha_Inicio      |      | Precio           |
-   | Telefono          |      | Salario           |      | Stock            |
-   +-------------------+      +-------------------+      | Fecha_Creacion   |
-         |                         |                     | Ultima_Actualiz. |
-         |                         |                     +------------------+
-         |                         |                           |   |    |     |
-         |                         |                           |   |    |     |
-         |                         |                           |   |    |     |
-         |                         |                           |   |    |     |
-         |               +---------+----------------+          |   |    |     |
-         |               |                         |          |   |    |     |
-   +-------------------+ |      Ventas             |          |   |    |     |
-   |     Compras       | |                         |          |   |    |     |
-   +-------------------+ | ID_Venta (PK)           |          |   |    |     |
-   | ID_Compra (PK)    | | Fecha                   |          |   |    |     |
-   | Fecha             | | Precio_Total            |          |   |    |     |
-   | Precio_Unitario   | +-------------------------+          |   |    |     |
-   +-------------------+                 |                  +---+   |    |     |
-         |                               |                  |       |    |     |
-         |                               |                  |       |    |     |
-   +-------------------+      +-------------------+        +-----+   |    |     |
-   |   Productos_Categorias  |   Detalles_Ventas   |        | Histor.  |    |     |
-   +-------------------+      +-------------------+        | Precio  |    |     |
-   | ID_Productos_Categ (PK) | ID_Detalle (PK)   |        +---------+    |     |
-   | ID_Producto (FK)       | ID_Venta (FK)     |        |               |     |
-   | ID_Categoria (FK)      | ID_Producto (FK)  |        |               |     |
-   +-------------------+      | Cantidad          |        |               |     |
-         |                    | Precio_Unitario   |        |               |     |
-         |                    +-------------------+        |               |     |
-         |                               |                  |               |     |
-         |                               |                  |               |     |
-   +-------------------+      +-------------------+        |               |     |
-   |Transacciones_Invent. |    | Opiniones_Clientes |       |               |     |
-   +-------------------+      +-------------------+        |               |     |
-   | ID_Transaccion (PK)     | ID_Opinion (PK)            |               |     |
-   | Tipo_Transaccion         | ID_Cliente (FK)           |               |     |
-   | Fecha                    | Fecha                    |               |     |
-   | Cantidad_Afectada        | Calificacion              |               |     |
-   | Id_Empleado (FK)         | Comentario                |               |     |
-   | Motivo                   | Producto_Evaluado         |               |     |
-   +--------------------------+---------------------------+---------------+-----+
-   ```
++------------------+       +----------------------+       +----------------------+
+|   Metodos_Pago   |       | Categorias_Productos |       |     Proveedores      |
++------------------+       +----------------------+       +----------------------+
+| ID_Metodo (PK)   |       | ID_Categoria (PK)     |       | ID_Proveedor (PK)    |
+| Nombre           |       | Nombre                |       | Nombre               |
++------------------+       | Descripcion           |       | Direccion            |
+                           +----------------------+       | Correo_Electronico   |
+                                                           | Telefono             |
+                                                           +----------------------+
+        |
+        |
+        |
+        V
+
++------------------+       +---------------------+       +---------------------+
+|     Clientes     |       |      Empleados      |       |      Productos      |
++------------------+       +---------------------+       +---------------------+
+| ID_Cliente (PK)  |       | ID_Empleado (PK)    |       | ID_Producto (PK)    |
+| Nombre           |       | Nombre              |       | Nombre              |
+| Correo_Electronico |     | Rol                 |       | Descripcion         |
+| Direccion        |       | Fecha_Inicio        |       | Precio              |
+| Telefono         |       | Salario             |       | Stock               |
++------------------+       +---------------------+       | Fecha_Creacion      |
+                                                         | Ultima_Actualizacion|
+                                                         +---------------------+
+        |                      |                      |               |
+        |                      |                      |               |
+        |                      |                      |               |
+        V                      V                      V               V
+
++------------------+       +---------------------+       +---------------------+
+|      Ventas      |       |       Compras       |       | Productos_Categorias|
++------------------+       +---------------------+       +---------------------+
+| ID_Venta (PK)    |       | ID_Compra (PK)      |       | ID_Productos_Categorias (PK) |
+| Fecha            |       | Fecha               |       | ID_Producto (FK)    |
+| ID_Producto (FK) |       | ID_Producto (FK)    |       | ID_Categoria (FK)   |
+| ID_Cliente (FK)  |       | ID_Proveedor (FK)   |       +---------------------+
+| Precio_Total     |       | Precio_Unitario     |
+| ID_Metodo (FK)   |       +---------------------+
++------------------+       
+
++------------------+       +---------------------+
+| Detalles_Ventas  |       | Historial_Precios   |
++------------------+       +---------------------+
+| ID_Detalle (PK)  |       | ID_Historial (PK)   |
+| ID_Venta (FK)    |       | ID_Producto (FK)    |
+| ID_Producto (FK) |       | Fecha_Cambio        |
+| Cantidad         |       | Precio_Anterior     |
+| Precio_Unitario  |       | Precio_Nuevo        |
++------------------+       | Razon_Cambio        |
+                           +---------------------+
+        |                               |
+        |                               |
+        |                               |
+        V                               V
+
++------------------+       +---------------------+
+| Transacciones_Inventario |   Opiniones_Clientes |
++------------------+       +---------------------+
+| ID_Transaccion (PK)|     | ID_Opinion (PK)     |
+| Tipo_Transaccion  |       | ID_Cliente (FK)     |
+| Fecha             |       | Fecha               |
+| ID_Producto (FK)  |       | Calificacion        |
+| Cantidad_Afectada |       | Comentario          |
+| Id_Empleado (FK)  |       | Producto_Evaluado   |
+| Motivo            |       +---------------------+
++------------------+       
+
++------------------+       +---------------------+
+| Detalles_Compras  |       | Historial_Clientes  |
++------------------+       +---------------------+
+| ID_Detalle_Compra (PK)|  | ID_Registro (PK)    |
+| ID_Compra (FK)    |       | ID_Cliente (FK)     |
+| ID_Producto (FK)  |       | Fecha_Transaccion   |
+| ID_Proveedor (FK) |       | Tipo_Transaccion    |
+| Cantidad          |       | Total_Gastado       |
+| Precio_Unitario   |       | Productos_Comprados |
++------------------+       +---------------------+
+```
+En este diagrama:
+* Las líneas con una "V" indican las relaciones entre las tablas.
+* Las líneas conectan las claves foráneas (FK) en las tablas que referencian a las claves primarias (PK) de otras tablas.
+* Por ejemplo, Ventas.ID_Producto (FK) se relaciona con Productos.ID_Producto (PK).
+* Las tablas Productos_Categorias, Detalles_Ventas, Transacciones_Inventario, Detalles_Compras, Opiniones_Clientes, y Historial_Clientes tienen claves foráneas que apuntan a las claves primarias de otras tablas, estableciendo así las relaciones en la base de datos.
 ________________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
