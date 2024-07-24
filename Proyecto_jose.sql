@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS Empleados (
 CREATE TABLE IF NOT EXISTS Productos (
     id_producto INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    precio_unitario DECIMAL(10,2) NOT NULL,  -- Eliminados los CHECK
+    precio_unitario DECIMAL(10,2) NOT NULL,  
     id_categoria INT NOT NULL,
     FOREIGN KEY (id_categoria) REFERENCES Categoria_Producto(id_categoria)
         ON DELETE RESTRICT  -- Evita eliminar una categoría con productos
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS Detalle_Pedidos (
     id_detalle_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_pedido INT NOT NULL,
     id_producto INT NOT NULL,
-    cantidad INT NOT NULL,  -- Eliminados los CHECK
+    cantidad INT NOT NULL,  
     precio_unitario DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_pedido) REFERENCES Pedidos(id_pedido)
         ON DELETE CASCADE,  -- Elimina detalles si se elimina un pedido
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS Facturas (
 CREATE TABLE IF NOT EXISTS Comentario_Cliente (
     id_comentario INT AUTO_INCREMENT PRIMARY KEY,
     id_cliente INT NOT NULL,
-    comentario TEXT NOT NULL,  -- Eliminados los CHECK
+    comentario TEXT NOT NULL,  
     fecha_comentario DATE NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
         ON DELETE CASCADE  -- Elimina comentarios si se elimina un cliente
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS Devolucion_Cliente (
     id_producto INT NOT NULL,
     motivo TEXT NOT NULL,
     fecha_devolucion DATE NOT NULL,
-    cantidad_devolucion INT NOT NULL,  -- Eliminados los CHECK
+    cantidad_devolucion INT NOT NULL,  
     FOREIGN KEY (id_pedido) REFERENCES Pedidos(id_pedido)
         ON DELETE CASCADE,  -- Elimina devoluciones si se elimina un pedido
     FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS Detalles_Compras_Proveedores (
     id_detalle_compra INT AUTO_INCREMENT PRIMARY KEY,
     id_compra_proveedor INT NOT NULL,
     id_producto INT NOT NULL,
-    cantidad INT NOT NULL,  -- Eliminados los CHECK
+    cantidad INT NOT NULL,  
     precio_unitario DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_compra_proveedor) REFERENCES Compras_Proveedores(id_compra_proveedor)
         ON DELETE CASCADE,  -- Elimina detalles si se elimina una compra
