@@ -1,159 +1,171 @@
+DROP DATABASE IF EXISTS empresa_ferretera;
+
 -- Creación de la base de datos si no existe
-CREATE DATABASE IF NOT EXISTS FerreteriaDB;
+CREATE DATABASE IF NOT EXISTS empresa_ferretera;
+USE empresa_ferretera;
 
--- Usar la base de datos FerreteriaDB
-USE FerreteriaDB;
-
--- Tabla de Métodos de Pago
-CREATE TABLE IF NOT EXISTS Metodos_Pago (
-    ID_Metodo INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(50) NOT NULL
+-- Tabla Departamentos
+CREATE TABLE IF NOT EXISTS Departamentos (
+    id_departamento INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_departamento VARCHAR(100) NOT NULL UNIQUE
 );
 
--- Tabla de Categorías de Productos
-CREATE TABLE IF NOT EXISTS Categorias_Productos (
-    ID_Categoria INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(100) NOT NULL,
-    Descripcion TEXT
+-- Tabla Metodo_Pago
+CREATE TABLE IF NOT EXISTS Metodo_Pago (
+    id_metodo_pago INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_metodo_pago VARCHAR(100) NOT NULL UNIQUE
 );
 
--- Tabla de Proveedores
-CREATE TABLE IF NOT EXISTS Proveedores (
-    ID_Proveedor INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(255) NOT NULL,
-    Direccion VARCHAR(255),
-    Correo_Electronico VARCHAR(255) UNIQUE,
-    Telefono VARCHAR(20)
+-- Tabla Categoria_Producto
+CREATE TABLE IF NOT EXISTS Categoria_Producto (
+    id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_categoria VARCHAR(100) NOT NULL UNIQUE
 );
 
--- Tabla de Clientes
+-- Tabla Clientes
 CREATE TABLE IF NOT EXISTS Clientes (
-    ID_Cliente INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(255) NOT NULL,
-    Correo_Electronico VARCHAR(255) UNIQUE,
-    Direccion VARCHAR(255),
-    Telefono VARCHAR(20)
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE
 );
 
--- Tabla de Empleados
+-- Tabla Proveedores
+CREATE TABLE IF NOT EXISTS Proveedores (
+    id_proveedor INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Tabla Empleados
 CREATE TABLE IF NOT EXISTS Empleados (
-    ID_Empleado INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(255) NOT NULL,
-    Rol VARCHAR(100),
-    Fecha_Inicio DATE,
-    Salario DECIMAL(10, 2)
+    id_empleado INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    id_departamento INT NOT NULL,
+    puesto VARCHAR(100),
+    FOREIGN KEY (id_departamento) REFERENCES Departamentos(id_departamento)
+        ON DELETE RESTRICT  -- Evita eliminar un departamento con empleados
 );
 
--- Tabla de Productos
+-- Tabla Productos
 CREATE TABLE IF NOT EXISTS Productos (
-    ID_Producto INT AUTO_INCREMENT PRIMARY KEY,
-    Nombre VARCHAR(255) NOT NULL,
-    Descripcion TEXT,
-    Precio DECIMAL(10, 2) NOT NULL,
-    Stock INT NOT NULL,
-    Fecha_Creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Ultima_Actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    id_producto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio_unitario DECIMAL(10,2) NOT NULL,  -- Eliminados los CHECK
+    id_categoria INT NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES Categoria_Producto(id_categoria)
+        ON DELETE RESTRICT  -- Evita eliminar una categoría con productos
 );
 
--- Tabla de Ventas
-CREATE TABLE IF NOT EXISTS Ventas (
-    ID_Venta INT AUTO_INCREMENT PRIMARY KEY,
-    Fecha DATE NOT NULL,
-    ID_Producto INT NOT NULL,
-    ID_Cliente INT NOT NULL,
-    Precio_Total DECIMAL(10, 2) NOT NULL,
-    ID_Metodo INT,
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto),
-    FOREIGN KEY (ID_Cliente) REFERENCES Clientes(ID_Cliente),
-    FOREIGN KEY (ID_Metodo) REFERENCES Metodos_Pago(ID_Metodo)
+-- Tabla Direcciones_Clientes
+CREATE TABLE IF NOT EXISTS Direcciones_Clientes (
+    id_direccion_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    direccion TEXT NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+        ON DELETE CASCADE  -- Elimina direcciones si se elimina un cliente
 );
 
--- Tabla de Compras
-CREATE TABLE IF NOT EXISTS Compras (
-    ID_Compra INT AUTO_INCREMENT PRIMARY KEY,
-    Fecha DATE NOT NULL,
-    ID_Producto INT NOT NULL,
-    ID_Proveedor INT NOT NULL,
-    Precio_Unitario DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto),
-    FOREIGN KEY (ID_Proveedor) REFERENCES Proveedores(ID_Proveedor)
+-- Tabla Direcciones_Proveedores
+CREATE TABLE IF NOT EXISTS Direcciones_Proveedores (
+    id_direccion_proveedor INT AUTO_INCREMENT PRIMARY KEY,
+    id_proveedor INT NOT NULL,
+    direccion TEXT NOT NULL,
+    FOREIGN KEY (id_proveedor) REFERENCES Proveedores(id_proveedor)
+        ON DELETE CASCADE  -- Elimina direcciones si se elimina un proveedor
 );
 
--- Tabla de Relación Productos_Categorias
-CREATE TABLE IF NOT EXISTS Productos_Categorias (
-    ID_Productos_Categorias INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Producto INT,
-    ID_Categoria INT,
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto),
-    FOREIGN KEY (ID_Categoria) REFERENCES Categorias_Productos(ID_Categoria)
+-- Tabla Pedidos
+CREATE TABLE IF NOT EXISTS Pedidos (
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    fecha_pedido DATE NOT NULL,
+    id_cliente INT NOT NULL,
+    id_metodo_pago INT NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+        ON DELETE CASCADE,  -- Elimina pedidos si se elimina un cliente
+    FOREIGN KEY (id_metodo_pago) REFERENCES Metodo_Pago(id_metodo_pago)
+        ON DELETE RESTRICT  -- Evita eliminar un método de pago usado en pedidos
 );
 
--- Tabla de Detalles de Ventas
-CREATE TABLE IF NOT EXISTS Detalles_Ventas (
-    ID_Detalle INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Venta INT NOT NULL,
-    ID_Producto INT NOT NULL,
-    Cantidad INT NOT NULL,
-    Precio_Unitario DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (ID_Venta) REFERENCES Ventas(ID_Venta),
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto)
+-- Tabla Detalle_Pedidos
+CREATE TABLE IF NOT EXISTS Detalle_Pedidos (
+    id_detalle_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    id_pedido INT NOT NULL,
+    id_producto INT NOT NULL,
+    cantidad INT NOT NULL,  -- Eliminados los CHECK
+    precio_unitario DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (id_pedido) REFERENCES Pedidos(id_pedido)
+        ON DELETE CASCADE,  -- Elimina detalles si se elimina un pedido
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+        ON DELETE RESTRICT  -- Evita eliminar un producto usado en detalles de pedidos
 );
 
--- Tabla de Historial de Precios
-CREATE TABLE IF NOT EXISTS Historial_Precios (
-    ID_Historial INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Producto INT NOT NULL,
-    Fecha_Cambio DATE NOT NULL,
-    Precio_Anterior DECIMAL(10, 2) NOT NULL,
-    Precio_Nuevo DECIMAL(10, 2) NOT NULL,
-    Razon_Cambio VARCHAR(255),
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto)
+-- Tabla Facturas
+CREATE TABLE IF NOT EXISTS Facturas (
+    id_factura INT AUTO_INCREMENT PRIMARY KEY,
+    fecha_factura DATE NOT NULL,
+    id_pedido INT NOT NULL,
+    total_factura DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (id_pedido) REFERENCES Pedidos(id_pedido)
+        ON DELETE CASCADE  -- Elimina facturas si se elimina un pedido
 );
 
--- Tabla de Transacciones de Inventario
-CREATE TABLE IF NOT EXISTS Transacciones_Inventario (
-    ID_Transaccion INT AUTO_INCREMENT PRIMARY KEY,
-    Tipo_Transaccion VARCHAR(50) NOT NULL,
-    Fecha DATE NOT NULL,
-    ID_Producto INT NOT NULL,
-    Cantidad_Afectada INT NOT NULL,
-    Id_Empleado INT NOT NULL,
-    Motivo VARCHAR(255),
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto),
-    FOREIGN KEY (Id_Empleado) REFERENCES Empleados(ID_Empleado)
+-- Tabla Comentario_Cliente
+CREATE TABLE IF NOT EXISTS Comentario_Cliente (
+    id_comentario INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    comentario TEXT NOT NULL,  -- Eliminados los CHECK
+    fecha_comentario DATE NOT NULL,
+    FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+        ON DELETE CASCADE  -- Elimina comentarios si se elimina un cliente
 );
 
--- Tabla de Opiniones y Feedback de Clientes
-CREATE TABLE IF NOT EXISTS Opiniones_Clientes (
-    ID_Opinion INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Cliente INT NOT NULL,
-    Fecha DATE NOT NULL,
-    Calificacion INT NOT NULL,
-    Comentario TEXT,
-    Producto_Evaluado VARCHAR(255),
-    FOREIGN KEY (ID_Cliente) REFERENCES Clientes(ID_Cliente)
+-- Tabla Devolucion_Cliente
+CREATE TABLE IF NOT EXISTS Devolucion_Cliente (
+    id_devolucion INT AUTO_INCREMENT PRIMARY KEY,
+    id_pedido INT NOT NULL,
+    id_producto INT NOT NULL,
+    motivo TEXT NOT NULL,
+    fecha_devolucion DATE NOT NULL,
+    cantidad_devolucion INT NOT NULL,  -- Eliminados los CHECK
+    FOREIGN KEY (id_pedido) REFERENCES Pedidos(id_pedido)
+        ON DELETE CASCADE,  -- Elimina devoluciones si se elimina un pedido
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+        ON DELETE RESTRICT  -- Evita eliminar un producto usado en devoluciones
 );
 
--- Tabla de Historial de Clientes
-CREATE TABLE IF NOT EXISTS Historial_Clientes (
-    ID_Registro INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Cliente INT NOT NULL,
-    Fecha_Transaccion DATE NOT NULL,
-    Tipo_Transaccion VARCHAR(50) NOT NULL,
-    Total_Gastado DECIMAL(10, 2),
-    Productos_Comprados TEXT,
-    FOREIGN KEY (ID_Cliente) REFERENCES Clientes(ID_Cliente)
+-- Tabla Inventario
+CREATE TABLE IF NOT EXISTS Inventario (
+    id_inventario INT AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT NOT NULL,
+    cantidad_stock INT NOT NULL,
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+        ON DELETE RESTRICT  -- Evita eliminar un producto con existencias en inventario
 );
 
--- Tabla de Detalles de Compras
-CREATE TABLE IF NOT EXISTS Detalles_Compras (
-    ID_Detalle_Compra INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Compra INT NOT NULL,
-    ID_Producto INT NOT NULL,
-    ID_Proveedor INT NOT NULL,
-    Cantidad INT NOT NULL,
-    Precio_Unitario DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (ID_Compra) REFERENCES Compras(ID_Compra),
-    FOREIGN KEY (ID_Producto) REFERENCES Productos(ID_Producto),
-    FOREIGN KEY (ID_Proveedor) REFERENCES Proveedores(ID_Proveedor)
+-- Tabla Compras_Proveedores
+CREATE TABLE IF NOT EXISTS Compras_Proveedores (
+    id_compra_proveedor INT AUTO_INCREMENT PRIMARY KEY,
+    fecha_compra DATE NOT NULL,
+    id_proveedor INT NOT NULL,
+    total_compra DECIMAL(10,2) NOT NULL,
+    estado_pago VARCHAR(50),
+    FOREIGN KEY (id_proveedor) REFERENCES Proveedores(id_proveedor)
+        ON DELETE RESTRICT  -- Evita eliminar un proveedor con compras asociadas
+);
+
+-- Tabla Detalles_Compras_Proveedores
+CREATE TABLE IF NOT EXISTS Detalles_Compras_Proveedores (
+    id_detalle_compra INT AUTO_INCREMENT PRIMARY KEY,
+    id_compra_proveedor INT NOT NULL,
+    id_producto INT NOT NULL,
+    cantidad INT NOT NULL,  -- Eliminados los CHECK
+    precio_unitario DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (id_compra_proveedor) REFERENCES Compras_Proveedores(id_compra_proveedor)
+        ON DELETE CASCADE,  -- Elimina detalles si se elimina una compra
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+        ON DELETE RESTRICT  -- Evita eliminar un producto usado en detalles de compras
 );
