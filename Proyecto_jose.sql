@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS Empleados (
     email VARCHAR(100) NOT NULL UNIQUE,
     id_departamento INT NOT NULL,
     puesto VARCHAR(100),
+    salario DECIMAL(10,2) NOT NULL DEFAULT 1300000,  
     FOREIGN KEY (id_departamento) REFERENCES Departamentos(id_departamento)
         ON DELETE RESTRICT  -- Evita eliminar un departamento con empleados
 );
