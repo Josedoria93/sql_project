@@ -23,3 +23,5 @@ id_producto,nombre,precio_unitario,id_categoria
 22,Triciclo,85.00,16
 23,Proyector,400.00,12
 24,Altavoz Bluetooth,90.00,12
+25,Teclado Mecánico,120.00,17
+26,Monitor 24 pulgadas,250.00,18
