@@ -23,3 +23,19 @@ id_comentario,id_cliente,comentario,fecha_comentario
 22,22,El triciclo llegó justo a tiempo para el cumpleaños de mi hijo,2024-07-22
 23,23,El proyector tiene una excelente resolución,2024-07-23
 24,24,El altavoz Bluetooth tiene un sonido muy claro,2024-07-24
+25,17,El producto llegó en excelente estado,2024-08-01
+26,18,El servicio al cliente fue muy eficiente,2024-08-02
+27,19,El embalaje estaba dañado, pero el producto estaba bien,2024-08-03
+28,20,La entrega fue más rápida de lo esperado,2024-08-04
+29,21,La calidad del producto es muy buena,2024-08-05
+30,22,El seguimiento del pedido fue muy bueno,2024-08-06
+31,23,El producto no corresponde a la descripción,2024-08-07
+32,24,Todo perfecto, volveré a comprar,2024-08-08
+33,17,El artículo llegó antes de la fecha estimada,2024-08-09
+34,18,Me gustaría que mejoraran el embalaje,2024-08-10
+35,19,La atención telefónica fue muy amable,2024-08-11
+36,20,El precio es excelente para la calidad del producto,2024-08-12
+37,21,No recibí toda la cantidad solicitada,2024-08-13
+38,22,La entrega fue puntual y el producto está bien,2024-08-14
+39,23,Tuve problemas con el seguimiento del pedido,2024-08-15
+40,24,El producto llegó defectuoso y se hizo el cambio rápidamente,2024-08-16
