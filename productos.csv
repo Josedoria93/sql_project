@@ -1,0 +1,6 @@
+id_producto,nombre,precio_unitario,id_categoria
+1,Martillo,25.50,2
+2,Destornillador,15.00,2
+3,Silla,100.00,3
+4,Maceta,8.75,4
+5,Clavos,3.50,2
