@@ -9,3 +9,9 @@ id_producto,nombre,precio_unitario,id_categoria
 8,Lámpara,45.00,8
 9,Cámara de Seguridad,200.00,9
 10,Pelota de Fútbol,30.00,10
+11,Microondas,180.00,11
+12,Cámara Digital,350.00,12
+13,Escritorio,200.00,13
+14,Ordenador Portátil,1200.00,14
+15,Camiseta,25.00,15
+16,Muñeca,45.00,16
