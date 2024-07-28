@@ -15,3 +15,11 @@ id_producto,nombre,precio_unitario,id_categoria
 14,Ordenador Portátil,1200.00,14
 15,Camiseta,25.00,15
 16,Muñeca,45.00,16
+17,Aspiradora,220.00,11
+18,Smartphone,800.00,12
+19,Silla de Oficina,150.00,13
+20,Tableta,500.00,14
+21,Jersey,60.00,15
+22,Triciclo,85.00,16
+23,Proyector,400.00,12
+24,Altavoz Bluetooth,90.00,12
