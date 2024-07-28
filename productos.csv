@@ -4,3 +4,8 @@ id_producto,nombre,precio_unitario,id_categoria
 3,Silla,100.00,3
 4,Maceta,8.75,4
 5,Clavos,3.50,2
+6,Refrigerador,750.00,6
+7,Taladro,120.00,7
+8,Lámpara,45.00,8
+9,Cámara de Seguridad,200.00,9
+10,Pelota de Fútbol,30.00,10
