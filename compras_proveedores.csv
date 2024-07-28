@@ -9,3 +9,9 @@ id_compra_proveedor,fecha_compra,id_proveedor,total_compra,estado_pago
 8,2024-07-08,8,135.00,Pagado
 9,2024-07-09,9,800.00,Pagado
 10,2024-07-10,10,150.00,Pendiente
+11,2024-07-11,11,180.00,Pagado
+12,2024-07-12,12,700.00,Pendiente
+13,2024-07-13,13,200.00,Pagado
+14,2024-07-14,14,1200.00,Pagado
+15,2024-07-15,15,100.00,Pendiente
+16,2024-07-16,16,135.00,Pagado
