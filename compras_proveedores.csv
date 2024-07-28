@@ -1,0 +1,6 @@
+id_compra_proveedor,fecha_compra,id_proveedor,total_compra,estado_pago
+1,2024-07-01,1,500.00,Pagado
+2,2024-07-02,2,300.00,Pendiente
+3,2024-07-03,3,450.00,Pagado
+4,2024-07-04,4,600.00,Pagado
+5,2024-07-05,5,250.00,Pendiente
