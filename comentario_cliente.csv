@@ -6,12 +6,20 @@ id_comentario,id_cliente,comentario,fecha_comentario
 5,5,La atención al cliente es excelente,2024-07-05
 6,6,El producto llegó en perfectas condiciones,2024-07-06
 7,7,La atención al cliente es muy buena,2024-07-07
-8,El envío fue rápido,2024-07-08
-9,La calidad del producto es excelente,2024-07-09
-10,Me gustó mucho el servicio,2024-07-10
+8,8,El envío fue rápido,2024-07-08
+9,9,La calidad del producto es excelente,2024-07-09
+10,10,Me gustó mucho el servicio,2024-07-10
 11,11,El microondas llegó a tiempo y en perfectas condiciones,2024-07-11
 12,12,Excelente cámara, superó mis expectativas,2024-07-12
-13,El escritorio llegó bien embalado, pero con un pequeño rasguño,2024-07-13
-14,El ordenador portátil funciona perfecto,2024-07-14
-15,La camiseta es de buena calidad y llegó rápido,2024-07-15
-16,La muñeca es hermosa, mi hija está encantada,2024-07-16
+13,13,El escritorio llegó bien embalado, pero con un pequeño rasguño,2024-07-13
+14,14,El ordenador portátil funciona perfecto,2024-07-14
+15,15,La camiseta es de buena calidad y llegó rápido,2024-07-15
+16,16,La muñeca es hermosa, mi hija está encantada,2024-07-16
+17,17,La aspiradora funciona perfectamente,2024-07-17
+18,18,El smartphone llegó rápido, pero la caja estaba dañada,2024-07-18
+19,19,La silla es muy cómoda y se ve robusta,2024-07-19
+20,20,La tableta es increíble, pero el envío fue lento,2024-07-20
+21,21,El jersey es de buena calidad y el color es hermoso,2024-07-21
+22,22,El triciclo llegó justo a tiempo para el cumpleaños de mi hijo,2024-07-22
+23,23,El proyector tiene una excelente resolución,2024-07-23
+24,24,El altavoz Bluetooth tiene un sonido muy claro,2024-07-24
