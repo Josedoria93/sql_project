@@ -1,0 +1,6 @@
+id_detalle_compra,id_compra_proveedor,id_producto,cantidad,precio_unitario
+1,1,1,20,25.00
+2,1,2,30,15.00
+3,2,3,10,100.00
+4,3,4,40,8.75
+5,4,5,50,3.50
