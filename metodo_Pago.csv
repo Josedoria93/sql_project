@@ -1,0 +1,6 @@
+id_metodo_pago,nombre_metodo_pago
+1,Transferencia Bancaria
+2,Tarjeta de Crédito
+3,Efectivo
+4,Paypal
+5,Cheque
