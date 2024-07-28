@@ -4,3 +4,8 @@ id_empleado,nombre,telefono,email,id_departamento,puesto,salario
 3,Andrés Morales,555-0003,andres.morales@example.com,3,Sales Manager,4000.00
 4,Elena Rodríguez,555-0004,elena.rodriguez@example.com,4,Purchasing Agent,3500.00
 5,José Martínez,555-0005,jose.martinez@example.com,5,Logistics Coordinator,3200.00
+6,Marta Gómez,555-0006,marta.gomez@example.com,2,Recruiter,2800.00
+7,Raúl Fernández,555-0007,raul.fernandez@example.com,3,Account Executive,3700.00
+8,Victoria Torres,555-0008,victoria.torres@example.com,4,Supply Chain Manager,4000.00
+9,Roberto Morales,555-0009,roberto.morales@example.com,5,Warehouse Supervisor,3300.00
+10,Claudia Pérez,555-0010,claudia.perez@example.com,1,Chief Financial Officer,5500.00
