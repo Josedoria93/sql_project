@@ -15,3 +15,11 @@ id_empleado,nombre,telefono,email,id_departamento,puesto,salario
 14,Marcos García,555-0014,marcos.garcia@example.com,5,Inventory Control Manager,3400.00
 15,Daniela Pérez,555-0015,daniela.perez@example.com,1,Financial Analyst,3100.00
 16,Ricardo López,555-0016,ricardo.lopez@example.com,2,HR Manager,3200.00
+17,Daniel Soto,555-0021,daniel.soto@example.com,2,Training Specialist,3100.00
+18,Paola Vargas,555-0022,paola.vargas@example.com,3,Product Manager,3700.00
+19,Marcelo Paredes,555-0023,marcelo.paredes@example.com,4,Logistics Coordinator,3900.00
+20,Silvia Muñoz,555-0024,silvia.munoz@example.com,5,Operations Director,4200.00
+21,Javier Ramírez,555-0025,javier.ramirez@example.com,1,Chief Executive Officer,6000.00
+22,Mónica Gómez,555-0026,monica.gomez@example.com,2,Marketing Director,3500.00
+23,Sergio Martínez,555-0027,sergio.martinez@example.com,3,Sales Manager,3400.00
+24,Verónica Fernández,555-0028,veronica.fernandez@example.com,4,Supply Chain Analyst,3300.00
