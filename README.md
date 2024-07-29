@@ -199,7 +199,6 @@ Columnas: id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_
   | estado_pago        |             | precio_unitario      |
   +-------------------+              +---------------------+
 ```
-Este bosquejo muestra las entidades principales (Clientes, Empleados, Proveedores, Direcciones_Clientes, Direcciones_Proveedores, Departamentos, Metodo_Pago, Categoria_Producto, Productos, Pedidos, Detalle_Pedidos, Facturas, Comentario_Cliente, Devolucion_Cliente, Inventario, Compras_Proveedores, Detalles_Compras_Proveedores) y sus relaciones mediante claves primarias (PK) y claves foráneas (FK). Las relaciones están indicadas por líneas que conectan las tablas, reflejando cómo están vinculadas las entidades dentro del modelo de base de datos.
 _______________________________________
 # SEGUNDA PARTE DE LA ENTREGA
 * Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
