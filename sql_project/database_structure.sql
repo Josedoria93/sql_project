@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS inventario (
     id_inventario INT AUTO_INCREMENT PRIMARY KEY COMMENT 'Identificador único del inventario',
     id_producto INT NOT NULL COMMENT 'Identificador del producto en inventario',
     cantidad_stock INT NOT NULL CHECK (cantidad_stock >= 0) COMMENT 'Cantidad en stock del producto',
-    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+    FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
         ON DELETE RESTRICT
 ) COMMENT = 'Tabla que almacena el inventario de productos. Restricción: No se puede eliminar un producto si hay stock asociado';
 
