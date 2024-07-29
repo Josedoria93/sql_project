@@ -1,5 +1,5 @@
 id_empleado,nombre,telefono,email,id_departamento,puesto,salario
-1,Mario López,555-0001,mario.lopez@example.com,1,Director General,5000.00
+1,Mario López,555-0001,mario.lopez@example.com,1,Director General,75000.00
 2,Patricia Gómez,555-0002,patricia.gomez@example.com,2,HR Specialist,3000.00
 3,Andrés Morales,555-0003,andres.morales@example.com,3,Sales Manager,4000.00
 4,Elena Rodríguez,555-0004,elena.rodriguez@example.com,4,Purchasing Agent,3500.00
