@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS pedidos (
     id_cliente INT NOT NULL COMMENT 'Identificador del cliente que realizó el pedido',
     id_metodo_pago INT NOT NULL COMMENT 'Identificador del método de pago utilizado',
     id_empleado INT NOT NULL COMMENT 'Identificador del empleado que gestionó el pedido',
-    FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
         ON DELETE CASCADE, -- Elimina pedidos si se elimina un cliente
     FOREIGN KEY (id_metodo_pago) REFERENCES metodo_pago(id_metodo_pago)
         ON DELETE RESTRICT, -- Evita eliminar un método de pago usado en pedidos
