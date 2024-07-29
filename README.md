@@ -208,6 +208,27 @@ _______________________________________
 
 ## Documentacion de Vistas
 
+1. Vista de Pedidos de un Cliente Específico
+* Descripción: Muestra todos los pedidos realizados por un cliente específico.
+* Objetivo: Proporcionar un resumen de los pedidos de un cliente para la gestión y seguimiento.
+* Tablas Compuestas: pedidos
+  
+CREATE VIEW pedidos_cliente_especifico AS
+SELECT id_pedido, fecha_pedido, id_empleado
+FROM pedidos
+WHERE id_cliente = 1; -- ID del cliente específico, ajustable
+
+2. Vista de Productos en Stock Bajo
+* Descripción: La vista proporciona una lista de productos cuyo stock en inventario es inferior a un umbral predefinido.
+* Objetivo: Facilitar la identificación de productos con bajo stock para que los encargados de inventario puedan tomar medidas y realizar * pedidos de reposición a tiempo.
+* Tablas Compuestas: Productos, inventario.
+  
+CREATE VIEW productos_stock_bajo AS
+SELECT p.id_producto, p.nombre, i.cantidad_stock
+FROM productos p
+JOIN inventario i ON p.id_producto = i.id_producto
+WHERE i.cantidad_stock < 10; -- la cantidad de Stock es ajustable
+
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
