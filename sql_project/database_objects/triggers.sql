@@ -1,3 +1,3 @@
-USE my_database_change_me;
+USE empresa_ferretera;
 
 -- Trigger para almacenar registros modificados si la reserva se cancela:
