@@ -8,13 +8,20 @@ DROP VIEW IF EXISTS pedidos_cliente_especifico;
 
 -- Crear la vista productos_stock_bajo
 CREATE VIEW productos_stock_bajo AS
-SELECT p.id_producto, p.nombre, i.cantidad_stock
+SELECT 
+       p.id_producto, 
+       p.nombre, 
+       i.cantidad_stock
 FROM productos p
-JOIN inventario i ON p.id_producto = i.id_producto
+JOIN inventario i 
+     ON p.id_producto = i.id_producto
 WHERE i.cantidad_stock < 50;
 
 -- Crear la vista pedidos_cliente_especifico
 CREATE VIEW pedidos_cliente_especifico AS
-SELECT id_pedido, fecha_pedido, id_empleado
+SELECT 
+       id_pedido, 
+       fecha_pedido, 
+       id_empleado
 FROM pedidos
 WHERE id_cliente = 1; -- ID del cliente específico, ajustable
