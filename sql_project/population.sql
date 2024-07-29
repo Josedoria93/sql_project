@@ -27,9 +27,9 @@ INSERT INTO categoria_producto (id_categoria, nombre_categoria) VALUES
 
 INSERT INTO metodo_pago (id_metodo_pago, nombre_metodo_pago) VALUES
 (1, 'Transferencia Bancaria'),
-(2, 'Tarjeta de Crédito'),
+(2, 'Tarjeta de Credito'),
 (3, 'Efectivo'),
-(4, 'Paypal'),
+(4, 'Tarjeta de Debito'),
 (5, 'Cheque');
 
 INSERT INTO clientes (id_cliente, nombre, telefono, email) VALUES
