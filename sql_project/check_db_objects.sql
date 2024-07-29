@@ -1,6 +1,6 @@
 -- QUERIES PARA VERIFICAR LAS CREACIONES Y CHEQUEAR DE QUE FUE EXITOSA LA CREACION DE CADA UNA
 
-USE my_database_change_me;
+USE empresa_ferretera;
 
 SELECT 
     TABLE_NAME, 
@@ -8,7 +8,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.TABLES
 WHERE 
-    TABLE_SCHEMA = 'my_database_change_me';
+    TABLE_SCHEMA = 'empresa_ferretera;';
 
 
 -- VERIFICACION DE IMPORTACION
@@ -19,7 +19,7 @@ SELECT
 FROM 
     information_schema.tables
 WHERE 
-    table_schema = 'my_database_change_me'
+    table_schema = 'empresa_ferretera;'
 ORDER BY 
     table_rows DESC;
 
@@ -31,7 +31,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.TABLES
 WHERE 
-    TABLE_SCHEMA = 'my_database_change_me' 
+    TABLE_SCHEMA = 'empresa_ferretera;' 
     AND TABLE_TYPE = 'VIEW'
 ORDER BY 
     TABLE_NAME;
@@ -43,7 +43,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.ROUTINES
 WHERE 
-    ROUTINE_SCHEMA = 'my_database_change_me' 
+    ROUTINE_SCHEMA = 'empresa_ferretera;' 
     AND ROUTINE_TYPE = 'FUNCTION'
 ORDER BY 
     ROUTINE_NAME;
@@ -56,7 +56,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.ROUTINES
 WHERE 
-    ROUTINE_SCHEMA = 'my_database_change_me' 
+    ROUTINE_SCHEMA = 'empresa_ferretera;' 
     AND ROUTINE_TYPE = 'PROCEDURE'
 ORDER BY 
     ROUTINE_NAME;
@@ -71,7 +71,7 @@ SELECT
 FROM 
     INFORMATION_SCHEMA.TRIGGERS
 WHERE 
-    TRIGGER_SCHEMA = 'my_database_change_me'
+    TRIGGER_SCHEMA = 'empresa_ferretera;'
 ORDER BY 
     EVENT_OBJECT_TABLE, 
     ACTION_TIMING, 
