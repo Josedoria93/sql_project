@@ -201,6 +201,15 @@ Columnas: id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_
 ```
 Este bosquejo muestra las entidades principales (Clientes, Empleados, Proveedores, Direcciones_Clientes, Direcciones_Proveedores, Departamentos, Metodo_Pago, Categoria_Producto, Productos, Pedidos, Detalle_Pedidos, Facturas, Comentario_Cliente, Devolucion_Cliente, Inventario, Compras_Proveedores, Detalles_Compras_Proveedores) y sus relaciones mediante claves primarias (PK) y claves foráneas (FK). Las relaciones están indicadas por líneas que conectan las tablas, reflejando cómo están vinculadas las entidades dentro del modelo de base de datos.
 _______________________________________
+# SEGUNDA PARTE DE LA ENTREGA
+* Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
+* Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
+* Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa
+* Listado de Triggers
+
+## Documentacion de Vistas
+
+_______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
 * Mejora en la satisfacción y retención de clientes a través de un mejor servicio y personalización.
