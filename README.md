@@ -1,5 +1,3 @@
-# Primera entrega CoderHouse
-
 # Problema a Resolver: Optimización y Gestión Integral de Operaciones en una Ferretería
 ________________________________________
 ## Introducción
