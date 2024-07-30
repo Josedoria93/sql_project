@@ -253,7 +253,25 @@ BEGIN
     WHERE id_producto = producto_id;
 END //
 DELIMITER ;
-```  
+```
+2. Nombre del Procedimiento Almacenado: agregar_cliente
+* Descripción: El procedimiento almacenado agregar_cliente se utiliza para insertar nuevos registros en la tabla clientes.  
+* Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes.
+* Tablas Compuestas: El procedimiento afecta a la tabla clientes.
+
+``` 
+-- Sp para agregar un cliente nuevo
+CREATE PROCEDURE agregar_cliente(
+    IN p_nombre VARCHAR(100),
+    IN p_telefono VARCHAR(20),
+    IN p_email VARCHAR(100))
+BEGIN
+    INSERT INTO clientes (nombre, telefono, email)
+    VALUES (p_nombre, p_telefono, p_email);
+END //
+
+DELIMITER ;
+``` 
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
