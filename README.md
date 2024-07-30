@@ -5,9 +5,13 @@ Una ferretería enfrenta múltiples desafíos operativos y estratégicos que req
 ________________________________________
 ## Desafíos Actuales
 1.	Gestión de Inventarios: La falta de un sistema centralizado dificulta el seguimiento preciso del inventario de productos. Esto conlleva a problemas como excesos o faltantes de stock, afectando la capacidad de respuesta ante la demanda y generando costos innecesarios por almacenamiento excesivo o pérdida de ventas por falta de productos.
+
 2.	Gestión de Clientes y CRM: La gestión manual de la información de clientes limita la capacidad de la ferretería para ofrecer servicios personalizados, gestionar eficientemente las relaciones con los clientes y aprovechar oportunidades de venta cruzada o upselling.
+
 3.	Optimización de Ventas y Rentabilidad: La falta de datos estructurados sobre las ventas, incluyendo análisis de productos más vendidos, rentabilidad por producto y tendencias de ventas, impide la toma de decisiones estratégicas fundamentadas para maximizar los ingresos y optimizar los márgenes de beneficio.
+
 4.	Gestión de Proveedores y Cadena de Suministro: La falta de visibilidad sobre la relación con los proveedores y los costos de adquisición de productos afecta la capacidad de la ferretería para negociar mejores términos, gestionar la calidad del suministro y optimizar los tiempos de entrega.
+
 5.	Análisis de Opiniones y Feedback de Clientes: La retroalimentación de los clientes no se gestiona de manera estructurada, lo que dificulta la identificación de áreas de mejora en el servicio al cliente y la reputación de la marca.
 ________________________________________
 ## Solución Propuesta: Implementación de una Base de Datos Relacional
