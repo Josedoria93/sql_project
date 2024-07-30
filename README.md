@@ -236,6 +236,24 @@ JOIN inventario i
      ON p.id_producto = i.id_producto
 WHERE i.cantidad_stock < 10; -- la cantidad de Stock es ajustable
 ```
+## Documentacion de Procedimientos Almacenados
+
+1. Nombre del Procedimiento Almacenado: sp_ventas_producto
+* Descripción: Simplifica la recuperación de datos relacionados con un producto específico en la tabla detalle_pedidos.
+* Objetivo: Recuperar todos los detalles de los pedidos relacionados con un producto específico, identificado por su producto_id, desde la tabla detalle_pedidos.
+* Tablas Compuestas:La Tabla Principal es detalle_pedidos y el campo clave de la Tabla detalle_pedidos es id_producto.
+  
+```  
+DELIMITER //
+CREATE PROCEDURE `sp_ventas_producto`( IN producto_id INT)
+BEGIN
+    -- Recuperar todos los detalles de `detalle_pedidos` para el `producto_id` dado
+    SELECT *
+    FROM detalle_pedidos
+    WHERE id_producto = producto_id;
+END //
+DELIMITER ;
+```  
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
