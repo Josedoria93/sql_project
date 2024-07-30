@@ -254,8 +254,8 @@ BEGIN
 END //
 DELIMITER ;
 ```
-2. Nombre del Procedimiento Almacenado: agregar_cliente
-* Descripción: El procedimiento almacenado agregar_cliente se utiliza para insertar nuevos registros en la tabla clientes.  
+2. Nombre del Procedimiento Almacenado: sp_agregar_cliente
+* Descripción: El procedimiento almacenado sp_agregar_cliente se utiliza para insertar nuevos registros en la tabla clientes.  
 * Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes.
 * Tablas Compuestas: El procedimiento afecta a la tabla clientes.
 
