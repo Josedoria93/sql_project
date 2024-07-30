@@ -1,9 +1,8 @@
 USE empresa_ferretera;
 
-Drop procedure sp_ventas_producto;
-Drop procedure sp_agregar_cliente;
+DROP PROCEDURE IF EXISTS sp_ventas_producto;
+DROP PROCEDURE IF EXISTS sp_agregar_cliente;
 
-    
 -- Crear el Procedimiento Almacenado sp_ventas_producto
 DELIMITER //
 CREATE PROCEDURE `sp_ventas_producto`( IN producto_id INT)
