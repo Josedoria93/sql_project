@@ -236,15 +236,7 @@ FROM empresa_ferretera.productos_stock_bajo;
 * Tablas Compuestas:La Tabla Principal es detalle_pedidos y el campo clave de la Tabla detalle_pedidos es id_producto.
   
 ```  
-DELIMITER //
-CREATE PROCEDURE `sp_ventas_producto`( IN producto_id INT)
-BEGIN
-    -- Recuperar todos los detalles de `detalle_pedidos` para el `producto_id` dado
-    SELECT *
-    FROM detalle_pedidos
-    WHERE id_producto = producto_id;
-END //
-DELIMITER ;
+CALL sp_ventas_producto(5);
 ```
 2. Nombre del Procedimiento Almacenado: sp_agregar_cliente
 * Descripción: El procedimiento almacenado sp_agregar_cliente se utiliza para insertar nuevos registros en la tabla clientes.  
