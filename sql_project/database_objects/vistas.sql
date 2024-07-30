@@ -15,7 +15,7 @@ SELECT
 FROM productos p
 JOIN inventario i 
      ON p.id_producto = i.id_producto
-WHERE i.cantidad_stock < 50;
+WHERE i.cantidad_stock < 250;
 
 -- Crear la vista pedidos_cliente_especifico
 CREATE VIEW pedidos_cliente_especifico AS
