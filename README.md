@@ -244,19 +244,8 @@ CALL sp_ventas_producto(5);
 * Tablas Compuestas: El procedimiento afecta a la tabla clientes.
 
 ```
-DELIMITER //
--- Sp para agregar un Cliente Nuevo
-CREATE PROCEDURE sp_agregar_cliente(
-    IN p_nombre VARCHAR(100),
-    IN p_telefono VARCHAR(20),
-    IN p_email VARCHAR(100)
-)
-BEGIN
-    INSERT INTO clientes (nombre, telefono, email)
-    VALUES (p_nombre, p_telefono, p_email);
-END //
+CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com');
 
-DELIMITER ;
 ``` 
 _______________________________________
 ## Beneficios Esperados
