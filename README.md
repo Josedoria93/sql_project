@@ -259,12 +259,14 @@ DELIMITER ;
 * Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes.
 * Tablas Compuestas: El procedimiento afecta a la tabla clientes.
 
-``` 
--- Sp para agregar un cliente nuevo
-CREATE PROCEDURE agregar_cliente(
+```
+DELIMITER //
+-- Sp para agregar un Cliente Nuevo
+CREATE PROCEDURE sp_agregar_cliente(
     IN p_nombre VARCHAR(100),
     IN p_telefono VARCHAR(20),
-    IN p_email VARCHAR(100))
+    IN p_email VARCHAR(100)
+)
 BEGIN
     INSERT INTO clientes (nombre, telefono, email)
     VALUES (p_nombre, p_telefono, p_email);
