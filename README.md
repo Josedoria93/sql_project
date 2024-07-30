@@ -18,20 +18,20 @@ ________________________________________
 Para abordar estos desafíos de manera efectiva, se propone la implementación de una base de datos relacional que incluya las siguientes entidades principales y relaciones:
 
 1.	Entidades:
-* Departamentos: Almacena información sobre los departamentos de la empresa.
-* Metodo_Pago: Contiene los métodos de pago disponibles para los clientes.
-* Categoria_Producto: Lista las categorías bajo las cuales se clasifican los productos que la empresa ofrece.
-* Clientes: Registra los datos de los clientes que compran en la empresa, incluyendo información de contacto única como teléfono y correo electrónico.
-* Proveedores: Almacena los datos de los proveedores de los productos que la empresa vende.
-* Empleados: Registra información detallada de los empleados de la empresa, incluyendo el departamento al que pertenecen.
-* Productos: Contiene detalles de los productos que la empresa vende, incluyendo su precio y la categoría a la que pertenecen.
-* Direcciones_Clientes y Direcciones_Proveedores: Almacenan las direcciones asociadas a clientes y proveedores respectivamente.
-* Pedidos: Registra los pedidos realizados por los clientes, incluyendo la fecha del pedido y el método de pago utilizado.
-* Detalle_Pedidos: Detalla los productos específicos incluidos en cada pedido, junto con la cantidad y precio unitario.
-* Facturas: Almacena información sobre las facturas generadas a partir de los pedidos.
-* Comentario_Cliente y Devolucion_Cliente: Registra comentarios de los clientes y las devoluciones realizadas por ellos.
-* Inventario: Mantiene un registro de las existencias de productos disponibles en la empresa.
-* Compras_Proveedores y Detalles_Compras_Proveedores: Registra las compras realizadas a los proveedores, incluyendo detalles como la fecha de compra, el total y los productos comprados.
+* Departamentos
+* Metodo_Pago
+* Categoria_Producto
+* Clientes
+* Proveedores
+* Empleados
+* Productos
+* Direcciones_Clientes y Direcciones_Proveedores
+* Pedidos
+* Detalle_Pedidos
+* Facturas
+* Comentario_Cliente y Devolucion_Cliente
+* Inventario
+* Compras_Proveedores y Detalles_Compras_Proveedores
 
 2.	Relaciones Clave:
 * Clientes <-> Pedidos: Un cliente puede realizar varios pedidos.
