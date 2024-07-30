@@ -8,20 +8,20 @@ INSERT INTO departamentos (id_departamento, nombre_departamento) VALUES
 (5, 'Logistica');
 
 INSERT INTO categoria_producto (id_categoria, nombre_categoria) VALUES
-(1, 'Electrodomésticos'),
+(1, 'Electrodomesticos'),
 (2, 'Herramientas'),
 (3, 'Muebles'),
-(4, 'Jardinería'),
-(5, 'Construcción'),
-(6, 'Electrodomésticos de Cocina'),
-(7, 'Herramientas Eléctricas'),
-(8, 'Decoración'),
+(4, 'Jardineria'),
+(5, 'Construccion'),
+(6, 'Electrodomesticos de Cocina'),
+(7, 'Herramientas Electricas'),
+(8, 'Decoracion'),
 (9, 'Seguridad'),
 (10, 'Equipo Deportivo'),
 (11, 'Mantenimiento del Hogar'),
-(12, 'Electrónica'),
+(12, 'Electronica'),
 (13, 'Oficina'),
-(14, 'Tecnología'),
+(14, 'Tecnologia'),
 (15, 'Ropa'),
 (16, 'Juguetes');
 
@@ -112,13 +112,13 @@ INSERT INTO productos (id_producto, nombre, precio_unitario, id_categoria) VALUE
 (5, 'Clavos', 3.50, 2),
 (6, 'Refrigerador', 750.00, 6),
 (7, 'Taladro', 120.00, 7),
-(8, 'Lámpara', 45.00, 8),
-(9, 'Cámara de Seguridad', 200.00, 9),
-(10, 'Pelota de Fútbol', 30.00, 10),
+(8, 'Lampara', 45.00, 8),
+(9, 'Camara de Seguridad', 200.00, 9),
+(10, 'Pelota de Futbol', 30.00, 10),
 (11, 'Microondas', 180.00, 11),
-(12, 'Cámara Digital', 350.00, 12),
+(12, 'Camara Digital', 350.00, 12),
 (13, 'Escritorio', 200.00, 13),
-(14, 'Ordenador Portátil', 1200.00, 14),
+(14, 'Ordenador Portatil', 1200.00, 14),
 (15, 'Camiseta', 25.00, 15),
 (16, 'Muñeca', 45.00, 16),
 (17, 'Aspiradora', 220.00, 11),
@@ -129,7 +129,7 @@ INSERT INTO productos (id_producto, nombre, precio_unitario, id_categoria) VALUE
 (22, 'Triciclo', 85.00, 16),
 (23, 'Proyector', 400.00, 12),
 (24, 'Altavoz Bluetooth', 90.00, 12),
-(25, 'Teclado Mecánico', 120.00, 14),
+(25, 'Teclado Mecanico', 120.00, 14),
 (26, 'Monitor 24 pulgadas', 250.00, 14);
 
 INSERT INTO direcciones_clientes (id_direccion_cliente, id_cliente, direccion) VALUES
