@@ -24,4 +24,4 @@ SELECT
        fecha_pedido, 
        id_empleado
 FROM pedidos
-WHERE id_cliente = 1; -- ID del cliente específico, ajustable
+WHERE id_cliente = 1; 
