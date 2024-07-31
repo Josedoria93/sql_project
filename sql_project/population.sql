@@ -227,7 +227,7 @@ INSERT INTO pedidos (id_pedido, fecha_pedido, id_cliente, id_metodo_pago, id_emp
 (46, '2024-08-22', 23, 1, 3),
 (47, '2024-08-23', 24, 2, 7);
 
-INSERT INTO detalle_pedidos (id_detalle_pedido, id_pedido, id_producto, cantidad, precio_unitario) VALUES
+INSERT INTO detalle_pedidos (id_detalle_pedido, id_pedido, id_producto, cantidad, precio_venta) VALUES
 (1, 1, 1, 2, 25.50),
 (2, 1, 2, 1, 15.00),
 (3, 2, 3, 1, 100.00),
@@ -403,37 +403,37 @@ INSERT INTO inventario (id_inventario, id_producto, cantidad_stock) VALUES
 (26, 26, 306);
 
 INSERT INTO compras_proveedores (id_compra_proveedor, fecha_compra, id_proveedor, total_compra, estado_pago) VALUES
-(1, '2024-07-01', 1, 500.00, 'Pagado'),
-(2, '2024-07-02', 2, 300.00, 'Pendiente'),
-(3, '2024-07-03', 3, 450.00, 'Pagado'),
-(4, '2024-07-04', 4, 600.00, 'Pagado'),
-(5, '2024-07-05', 5, 250.00, 'Pendiente'),
-(6, '2024-07-06', 6, 800.00, 'Pagado'),
-(7, '2024-07-07', 7, 240.00, 'Pendiente'),
-(8, '2024-07-08', 8, 135.00, 'Pagado'),
-(9, '2024-07-09', 9, 800.00, 'Pagado'),
-(10, '2024-07-10', 10, 150.00, 'Pendiente'),
-(11, '2024-07-11', 11, 180.00, 'Pagado'),
-(12, '2024-07-12', 12, 700.00, 'Pendiente'),
-(13, '2024-07-13', 13, 200.00, 'Pagado'),
-(14, '2024-07-14', 14, 1200.00, 'Pagado'),
-(15, '2024-07-15', 15, 100.00, 'Pendiente'),
-(16, '2024-07-16', 16, 135.00, 'Pagado');
+(1, '2024-07-01', 1, 300.00, 'Pagado'),
+(2, '2024-07-02', 2, 270.00, 'Pendiente'),
+(3, '2024-07-03', 3, 800.00, 'Pagado'),
+(4, '2024-07-04', 4, 230.00, 'Pagado'),
+(5, '2024-07-05', 5, 75.00, 'Pendiente'),
+(6, '2024-07-06', 6, 16500.00, 'Pagado'),
+(7, '2024-07-07', 7, 5400.00, 'Pendiente'),
+(8, '2024-07-08', 8, 2000.00, 'Pagado'),
+(9, '2024-07-09', 9, 2500.00, 'Pagado'),
+(10, '2024-07-10', 10, 1000.00, 'Pendiente'),
+(11, '2024-07-11', 11, 1600.00, 'Pagado'),
+(12, '2024-07-12', 12, 2250.00, 'Pendiente'),
+(13, '2024-07-13', 13, 1000.00, 'Pagado'),
+(14, '2024-07-14', 14, 4500.00, 'Pagado'),
+(15, '2024-07-15', 15, 250.00, 'Pendiente'),
+(16, '2024-07-16', 16, 625.00, 'Pagado');
 
-INSERT INTO detalles_compras_proveedores (id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_unitario) VALUES
-(1, 1, 1, 20, 25.00),
-(2, 1, 2, 30, 15.00),
-(3, 2, 3, 10, 100.00),
-(4, 3, 4, 40, 8.75),
-(5, 4, 5, 50, 3.50),
-(6, 6, 6, 30, 750.00),
-(7, 7, 7, 60, 120.00),
-(8, 8, 8, 80, 45.00),
-(9, 9, 9, 25, 200.00),
-(10, 10, 10, 100, 30.00),
-(11, 11, 11, 20, 180.00),
-(12, 12, 12, 15, 350.00),
-(13, 13, 13, 10, 200.00),
-(14, 14, 14, 5, 1200.00),
-(15, 15, 15, 50, 25.00),
-(16, 16, 16, 25, 45.00);
+INSERT INTO detalles_compras_proveedores (id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_compra) VALUES
+(1, 1, 1, 20, 15.00),
+(2, 1, 2, 30, 9.00),
+(3, 2, 3, 10, 80.00),
+(4, 3, 4, 40, 5.75),
+(5, 4, 5, 50, 1.50),
+(6, 6, 6, 30, 550.00),
+(7, 7, 7, 60, 90.00),
+(8, 8, 8, 80, 25.00),
+(9, 9, 9, 25, 100.00),
+(10, 10, 10, 100, 10.00),
+(11, 11, 11, 20, 80.00),
+(12, 12, 12, 15, 150.00),
+(13, 13, 13, 10, 100.00),
+(14, 14, 14, 5, 900.00),
+(15, 15, 15, 50, 5.00),
+(16, 16, 16, 25, 25.00);
