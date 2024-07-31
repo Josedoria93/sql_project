@@ -218,19 +218,14 @@ _______________________________________
 * Tablas Compuestas: pedidos
   
 ```
-SELECT 
-       id_pedido,
-       fecha_pedido,
-       id_empleado
-FROM empresa_ferretera.pedidos_cliente_especifico;
+SELECT id_pedido,fecha_pedido,id_empleado FROM empresa_ferretera.pedidos_cliente_especifico;
 ```
 2. Vista de Productos en Stock Bajo
 * Descripción: La vista proporciona una lista de productos cuyo stock en inventario es inferior a un umbral predefinido.
 * Objetivo: Facilitar la identificación de productos con bajo stock para que los encargados de inventario puedan tomar medidas y realizar * pedidos de reposición a tiempo.
 * Tablas Compuestas: Productos, inventario.
 ```  
-SELECT *
-FROM empresa_ferretera.productos_stock_bajo;
+SELECT * FROM empresa_ferretera.productos_stock_bajo;
 ```
 ## Documentacion de Procedimientos Almacenados
 
