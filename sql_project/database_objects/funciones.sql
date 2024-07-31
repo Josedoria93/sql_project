@@ -1,4 +1,3 @@
-
 USE empresa_ferretera;
 
 -- Eliminar la función total_ventas_cliente si existe
@@ -27,6 +26,7 @@ BEGIN
 END //
 DELIMITER ;
 
+DELIMITER //
 -- Función para Obtener el Total de Compras Realizadas a un Proveedor
 CREATE FUNCTION total_compras_proveedor(proveedor_id INT)
 RETURNS DECIMAL(10,2)
