@@ -250,7 +250,23 @@ CALL sp_ventas_producto(5);
 ```
 CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com');
 
-``` 
+```
+## Documentacion de Procedimientos Almacenados
+
+1. Nombre de la Función: total_ventas_cliente
+* Descripción: Esta función es útil para la generación de informes financieros y análisis de clientes que requieran seguimiento del rendimiento de ventas por cliente.
+* Objetivo: Calcular el total de ventas acumuladas para un cliente específico dentro de una base de datos.
+* Tablas Compuestas: facturas y pedidos, parámetro de Entrada (cliente_id INT).
+```
+  SELECT total_ventas_cliente(1) AS total_ventas;
+```
+2. Nombre de la Función: total_compras_proveedor
+* Descripción: Esencial para gestionar la contabilidad de proveedores y para análisis de gastos relacionados con proveedores en sistemas de gestión de compras y finanzas.
+* Objetivo: Calcular el total de compras realizadas a un proveedor específico. 
+* Tablas Compuestas: compras_proveedores y parámetro de Entrada (proveedor_id INT).
+```
+SELECT total_compras_proveedor(5) AS total_compras;
+```
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
