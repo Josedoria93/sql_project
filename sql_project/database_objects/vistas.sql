@@ -24,4 +24,4 @@ SELECT
        fecha_pedido, 
        id_empleado
 FROM pedidos
-WHERE id_cliente = 1; 
+WHERE id_cliente = 2; 
