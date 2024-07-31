@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS detalle_pedidos (
     id_pedido INT NOT NULL COMMENT 'Identificador del pedido',
     id_producto INT NOT NULL COMMENT 'Identificador del producto',
     cantidad INT NOT NULL CHECK (cantidad > 0) COMMENT 'Cantidad del producto en el pedido',
-    precio_unitario DECIMAL(10,2) NOT NULL COMMENT 'Precio unitario del producto en el pedido',
+    precio_venta DECIMAL(10,2) NOT NULL COMMENT 'Precio unitario del producto en el pedido',
     FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido)
         ON DELETE CASCADE,
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS detalles_compras_proveedores (
     id_compra_proveedor INT NOT NULL COMMENT 'Identificador de la compra al proveedor',
     id_producto INT NOT NULL COMMENT 'Identificador del producto comprado',
     cantidad INT NOT NULL CHECK (cantidad > 0) COMMENT 'Cantidad del producto en la compra',
-    precio_unitario DECIMAL(10,2) NOT NULL COMMENT 'Precio unitario del producto en la compra',
+    precio_compra DECIMAL(10,2) NOT NULL COMMENT 'Precio unitario del producto en la compra',
     FOREIGN KEY (id_compra_proveedor) REFERENCES compras_proveedores(id_compra_proveedor)
         ON DELETE CASCADE,
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
