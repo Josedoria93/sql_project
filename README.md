@@ -251,7 +251,7 @@ CALL sp_ventas_producto(5);
 CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com');
 
 ```
-## Documentacion de Procedimientos Almacenados
+## Documentacion de Función
 
 1. Nombre de la Función: total_ventas_cliente
 * Descripción: Esta función es útil para la generación de informes financieros y análisis de clientes que requieran seguimiento del rendimiento de ventas por cliente.
