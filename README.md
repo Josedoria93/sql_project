@@ -269,10 +269,10 @@ SELECT total_compras_proveedor(5) AS total_compras;
 * Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se agrega un nuevo detalle de pedido (venta).  
 * Tablas Compuestas: detalle_pedidos y inventario.
 
-2. Nombre del Trigger: 
+2. Nombre del Trigger: after_insert_detalles_compras_proveedores 
 * Descripción: Se encarga de ajustar la cantidad de stock disponible para un producto en el inventario, aumentando la cantidad del producto que se ha comprado.
-* Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se agrega un nuevo detalle de pedido (Compra).  
-* Tablas Compuestas:  y inventario.
+* Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se registra una nueva compra de productos a proveedores. 
+* Tablas Compuestas: detalles_compras_proveedores y inventario.
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
