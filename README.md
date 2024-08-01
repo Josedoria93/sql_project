@@ -262,6 +262,17 @@ CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com
 ```
 SELECT total_compras_proveedor(5) AS total_compras;
 ```
+## Documentacion de los Trigger
+
+1. Nombre del Trigger: after_insert_detalle_pedido
+* Descripción: Se encarga de ajustar la cantidad de stock disponible para un producto en el inventario, descontando la cantidad del producto que se ha vendido.
+* Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se agrega un nuevo detalle de pedido (venta).  
+* Tablas Compuestas: detalle_pedidos y inventario.
+
+2. Nombre del Trigger: 
+* Descripción: Se encarga de ajustar la cantidad de stock disponible para un producto en el inventario, aumentando la cantidad del producto que se ha comprado.
+* Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se agrega un nuevo detalle de pedido (Compra).  
+* Tablas Compuestas:  y inventario.
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
