@@ -251,7 +251,7 @@ CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com
 * Tablas Compuestas: El procedimiento interactúa con la tabla empleados.
 
 ```
-CALL sp_puesto('Gerente de Ventas', @promedio, @mayor, @menor);
+CALL sp_puesto('Sales Manager', @promedio, @mayor, @menor);
 SELECT @promedio AS Promedio, @mayor AS Mayor, @menor AS Menor;
 ```
 ## Documentacion de Función
