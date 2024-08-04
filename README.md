@@ -4,20 +4,20 @@ ________________________________________
 Una ferretería enfrenta múltiples desafíos operativos y estratégicos que requieren una gestión eficiente de datos para mejorar la rentabilidad, satisfacción del cliente y eficiencia operativa. La implementación de una base de datos bien estructurada juega un papel crucial en abordar estas problemáticas, proporcionando una plataforma centralizada para la gestión y análisis de datos críticos.
 ________________________________________
 ## Desafíos Actuales
-1.	Gestión de Inventarios: La falta de un sistema centralizado dificulta el seguimiento preciso del inventario de productos. Esto conlleva a problemas como excesos o faltantes de stock, afectando la capacidad de respuesta ante la demanda y generando costos innecesarios por almacenamiento excesivo o pérdida de ventas por falta de productos.
+1.	**Gestión de Inventarios**: La falta de un sistema centralizado dificulta el seguimiento preciso del inventario de productos. Esto conlleva a problemas como excesos o faltantes de stock, afectando la capacidad de respuesta ante la demanda y generando costos innecesarios por almacenamiento excesivo o pérdida de ventas por falta de productos.
 
-2.	Gestión de Clientes y CRM: La gestión manual de la información de clientes limita la capacidad de la ferretería para ofrecer servicios personalizados, gestionar eficientemente las relaciones con los clientes y aprovechar oportunidades de venta cruzada o upselling.
+2.	**Gestión de Clientes y CRM**: La gestión manual de la información de clientes limita la capacidad de la ferretería para ofrecer servicios personalizados, gestionar eficientemente las relaciones con los clientes y aprovechar oportunidades de venta cruzada o upselling.
 
-3.	Optimización de Ventas y Rentabilidad: La falta de datos estructurados sobre las ventas, incluyendo análisis de productos más vendidos, rentabilidad por producto y tendencias de ventas, impide la toma de decisiones estratégicas fundamentadas para maximizar los ingresos y optimizar los márgenes de beneficio.
+3.	**Optimización de Ventas y Rentabilidad**: La falta de datos estructurados sobre las ventas, incluyendo análisis de productos más vendidos, rentabilidad por producto y tendencias de ventas, impide la toma de decisiones estratégicas fundamentadas para maximizar los ingresos y optimizar los márgenes de beneficio.
 
-4.	Gestión de Proveedores y Cadena de Suministro: La falta de visibilidad sobre la relación con los proveedores y los costos de adquisición de productos afecta la capacidad de la ferretería para negociar mejores términos, gestionar la calidad del suministro y optimizar los tiempos de entrega.
+4.	**Gestión de Proveedores y Cadena de Suministro**: La falta de visibilidad sobre la relación con los proveedores y los costos de adquisición de productos afecta la capacidad de la ferretería para negociar mejores términos, gestionar la calidad del suministro y optimizar los tiempos de entrega.
 
-5.	Análisis de Opiniones y Feedback de Clientes: La retroalimentación de los clientes no se gestiona de manera estructurada, lo que dificulta la identificación de áreas de mejora en el servicio al cliente y la reputación de la marca.
+5.	**Análisis de Opiniones y Feedback de Clientes**: La retroalimentación de los clientes no se gestiona de manera estructurada, lo que dificulta la identificación de áreas de mejora en el servicio al cliente y la reputación de la marca.
 ________________________________________
 ## Solución Propuesta: Implementación de una Base de Datos Relacional
 Para abordar estos desafíos de manera efectiva, se propone la implementación de una base de datos relacional que incluya las siguientes entidades principales y relaciones:
 
-1.	Entidades:
+1.	**Entidades**:
 * Departamentos
 * Metodo_Pago
 * Categoria_Producto
@@ -33,7 +33,7 @@ Para abordar estos desafíos de manera efectiva, se propone la implementación d
 * Inventario
 * Compras_Proveedores y Detalles_Compras_Proveedores
 
-2.	Relaciones Clave:
+2.	**Relaciones Clave**:
 * Clientes <-> Pedidos: Un cliente puede realizar varios pedidos.
 * Pedidos <-> Detalle_Pedidos: Un pedido puede incluir múltiples productos (detalles).
 * Pedidos <-> Facturas: Un pedido puede tener asociada una factura.
@@ -42,7 +42,7 @@ Para abordar estos desafíos de manera efectiva, se propone la implementación d
 * Productos <-> Detalle_Pedidos y Detalles_Compras_Proveedores: Productos son incluidos en detalles de pedidos y compras.
 * Proveedores <-> Compras_Proveedores: Los proveedores realizan ventas a la empresa en forma de compras.
 
-3.	Funcionalidades Clave:
+3.	**Funcionalidades Clave**:
 * Análisis de Inventarios: Seguimiento en tiempo real del stock de productos y análisis de rotación de inventarios.
 * Análisis de Ventas: Identificación de productos más vendidos, análisis de rentabilidad por producto y predicción de demanda.
 * Gestión de Clientes: Seguimiento de preferencias de compra, gestión de lealtad y segmentación de clientes.
@@ -212,7 +212,7 @@ _______________________________________
 
 ## Documentacion de Vistas
 
-1. Vista de Pedidos de un Cliente Específico
+1. **Vista de Pedidos de un Cliente Específico**
 * Descripción: Muestra todos los pedidos realizados por un cliente específico.
 * Objetivo: Proporcionar un resumen de los pedidos de un cliente para la gestión y seguimiento.
 * Tablas Compuestas: pedidos
@@ -220,7 +220,7 @@ _______________________________________
 ```
 SELECT id_pedido,fecha_pedido,id_empleado FROM empresa_ferretera.pedidos_cliente_especifico;
 ```
-2. Vista de Productos en Stock Bajo
+2. **Vista de Productos en Stock Bajo**
 * Descripción: La vista proporciona una lista de productos cuyo stock en inventario es inferior a un umbral predefinido.
 * Objetivo: Facilitar la identificación de productos con bajo stock para que los encargados de inventario puedan tomar medidas y realizar * pedidos de reposición a tiempo.
 * Tablas Compuestas: Productos, inventario.
@@ -229,7 +229,7 @@ SELECT * FROM empresa_ferretera.productos_stock_bajo;
 ```
 ## Documentacion de Procedimientos Almacenados
 
-1. Nombre del Procedimiento Almacenado: sp_ventas_producto
+1. **Nombre del Procedimiento Almacenado: sp_ventas_producto**
 * Descripción: Simplifica la recuperación de datos relacionados con un producto específico en la tabla detalle_pedidos.
 * Objetivo: Recuperar todos los detalles de los pedidos relacionados con un producto específico, identificado por su producto_id, desde la tabla detalle_pedidos.
 * Tablas Compuestas:La Tabla Principal es detalle_pedidos y el campo clave de la Tabla detalle_pedidos es id_producto.
@@ -237,7 +237,7 @@ SELECT * FROM empresa_ferretera.productos_stock_bajo;
 ```  
 CALL sp_ventas_producto(5);
 ```
-2. Nombre del Procedimiento Almacenado: sp_agregar_cliente
+2. **Nombre del Procedimiento Almacenado: sp_agregar_cliente**
 * Descripción: El procedimiento almacenado sp_agregar_cliente se utiliza para insertar nuevos registros en la tabla clientes.  
 * Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes.
 * Tablas Compuestas: El procedimiento afecta a la tabla clientes.
@@ -248,14 +248,14 @@ CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com
 ```
 ## Documentacion de Función
 
-1. Nombre de la Función: total_ventas_cliente
+1. **Nombre de la Función: total_ventas_cliente**
 * Descripción: Esta función es útil para la generación de informes financieros y análisis de clientes que requieran seguimiento del rendimiento de ventas por cliente.
 * Objetivo: Calcular el total de ventas acumuladas para un cliente específico dentro de una base de datos.
 * Tablas Compuestas: facturas y pedidos, parámetro de Entrada (cliente_id INT).
 ```
   SELECT total_ventas_cliente(1) AS total_ventas;
 ```
-2. Nombre de la Función: total_compras_proveedor
+2. **Nombre de la Función: total_compras_proveedor**
 * Descripción: Esencial para gestionar la contabilidad de proveedores y para análisis de gastos relacionados con proveedores en sistemas de gestión de compras y finanzas.
 * Objetivo: Calcular el total de compras realizadas a un proveedor específico. 
 * Tablas Compuestas: compras_proveedores y parámetro de Entrada (proveedor_id INT).
@@ -264,12 +264,12 @@ SELECT total_compras_proveedor(5) AS total_compras;
 ```
 ## Documentacion de los Trigger
 
-1. Nombre del Trigger: after_insert_detalle_pedido
+1. **Nombre del Trigger: after_insert_detalle_pedido**
 * Descripción: Se encarga de ajustar la cantidad de stock disponible para un producto en el inventario, descontando la cantidad del producto que se ha vendido.
 * Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se agrega un nuevo detalle de pedido (venta).  
 * Tablas Compuestas: detalle_pedidos y inventario.
 
-2. Nombre del Trigger: after_insert_detalles_compras_proveedores 
+2. **Nombre del Trigger: after_insert_detalles_compras_proveedores** 
 * Descripción: Se encarga de ajustar la cantidad de stock disponible para un producto en el inventario, aumentando la cantidad del producto que se ha comprado.
 * Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se registra una nueva compra de productos a proveedores. 
 * Tablas Compuestas: detalles_compras_proveedores y inventario.
