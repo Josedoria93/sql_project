@@ -50,71 +50,71 @@ Para abordar estos desafíos de manera efectiva, se propone la implementación d
 * Análisis de Feedback de Clientes: Identificación de áreas de mejora en servicio al cliente y ajuste de estrategias de marketing.
 ________________________________________
 ## Explicación de las tablas:
-1. Departamentos (Departments):
+1. **Departamentos (Departments)**:
 * Almacena información de los departamentos.
 Columnas: id_departamento, nombre_departamento.
 
-2. Metodo_Pago (Payment Methods):
+2. **Metodo_Pago (Payment Methods)**:
 * Almacena información de los métodos de pago.
 Columnas: id_metodo_pago, nombre_metodo_pago.
 
-3. Categoria_Producto (Product Categories):
+3. **Categoria_Producto (Product Categories)**:
 * Almacena información de las categorías de productos.
 Columnas: id_categoria, nombre_categoria.
 
-4. Clientes (Customers):
+4. **Clientes (Customers)**:
 * Almacena información de los clientes.
 Columnas: id_cliente, nombre, telefono, email.
 
-5. Proveedores (Suppliers):
+5. **Proveedores (Suppliers)**:
 * Almacena información de los proveedores.
 Columnas: id_proveedor, nombre, telefono, email.
 
-6. Empleados (Employees):
+6. **Empleados (Employees)**:
 * Almacena información de los empleados con referencia a la tabla Departamentos.
 Columnas: id_empleado, nombre, telefono, email, id_departamento, puesto.
 
-7. Productos (Products):
+7. **Productos (Products)**:
 * Almacena información de los productos con referencia a Categoria_Producto para categorización.
 Columnas: id_producto, nombre, precio_unitario, id_categoria.
 
-8. Direcciones_Clientes (Customer Addresses):
+8. **Direcciones_Clientes (Customer Addresses)**:
 * Almacena direcciones de clientes con referencia a Clientes.
 Columnas: id_direccion_cliente, id_cliente, direccion.
 
-9. Direcciones_Proveedores (Supplier Addresses):
+9. **Direcciones_Proveedores (Supplier Addresses)**:
 * Almacena direcciones de proveedores con referencia a Proveedores.
 Columnas: id_direccion_proveedor, id_proveedor, direccion.
 
-10. Pedidos (Orders):
+10. **Pedidos (Orders**):
 * Almacena información de pedidos con referencias a Clientes y Metodo_Pago.
 Columnas: id_pedido, fecha_pedido, id_cliente, id_metodo_pago.
 
-11. Detalle_Pedidos (Order Details):
+11. **Detalle_Pedidos (Order Details)**:
 * Almacena detalles de pedidos con referencias a Pedidos y Productos.
 Columnas: id_detalle_pedido, id_pedido, id_producto, cantidad, precio_unitario.
 
-12. Facturas (Invoices):
+12. **Facturas (Invoices)**:
 * Almacena información de facturas con referencia a Pedidos.
 Columnas: id_factura, fecha_factura, id_pedido, total_factura.
 
-13. Comentario_Cliente (Customer Comments):
+13. **Comentario_Cliente (Customer Comments)**:
 * Almacena comentarios de clientes con referencia a Clientes.
 Columnas: id_comentario, id_cliente, comentario, fecha_comentario.
 
-14. Devolucion_Cliente (Customer Returns):
+14. **Devolucion_Cliente (Customer Returns)**:
 * Almacena información de devoluciones de clientes con referencias a Pedidos y Productos.
 Columnas: id_devolucion, id_pedido, id_producto, motivo, fecha_devolucion, cantidad_devolucion.
 
-15. Inventario (Inventory):
+15. **Inventario (Inventory)**:
 * Almacena información de inventario con referencia a Productos.
 Columnas: id_inventario, id_producto, cantidad_stock.
 
-16. Compras_Proveedores (Supplier Purchases):
+16. **Compras_Proveedores (Supplier Purchases)**:
 * Almacena información de compras a proveedores con referencia a Proveedores.
 Columnas: id_compra_proveedor, fecha_compra, id_proveedor, total_compra, estado_pago.
 
-17. Detalles_Compras_Proveedores (Supplier Purchase Details):
+17. **Detalles_Compras_Proveedores (Supplier Purchase Details)**:
 * Almacena detalles de compras a proveedores con referencias a Compras_Proveedores y Productos.
 Columnas: id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_unitario.
 
