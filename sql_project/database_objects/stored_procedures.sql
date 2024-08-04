@@ -2,6 +2,7 @@ USE empresa_ferretera;
 
 DROP PROCEDURE IF EXISTS sp_ventas_producto;
 DROP PROCEDURE IF EXISTS sp_agregar_cliente;
+Drop procedure IF EXISTS sp_puesto;
 
 -- Crear el Procedimiento Almacenado sp_ventas_producto
 DELIMITER //
@@ -26,5 +27,33 @@ BEGIN
     INSERT INTO clientes (nombre, telefono, email)
     VALUES (p_nombre, p_telefono, p_email);
 END //
+DELIMITER ;
 
+-- Procedimiento Almacenado para obtener estadísticas salariales de un puesto
+DELIMITER //
+CREATE PROCEDURE sp_puesto(
+    IN p_puesto VARCHAR(100), 
+    OUT p_promedio FLOAT, 
+    OUT p_mayor FLOAT, 
+    OUT p_menor FLOAT
+)
+BEGIN
+    -- Calcular el salario promedio
+    SELECT AVG(salario) INTO p_promedio
+    FROM empleados 
+    WHERE puesto = p_puesto;
+
+    -- Calcular el salario máximo
+    SELECT MAX(salario) INTO p_mayor
+    FROM empleados 
+    WHERE puesto = p_puesto;
+
+    -- Calcular el salario mínimo
+    SELECT MIN(salario) INTO p_menor
+    FROM empleados 
+    WHERE puesto = p_puesto;
+
+    -- Mostrar los valores para depuración
+    SELECT p_promedio AS Promedio, p_mayor AS Mayor, p_menor AS Menor;
+END //
 DELIMITER ;
