@@ -244,7 +244,15 @@ CALL sp_ventas_producto(5);
 
 ```
 CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com');
+```
+3. **Nombre del Procedimiento Almacenado: sp_puesto**
+* Descripción: Permite a los responsables de recursos humanos, finanzas o administración obtener información rápida y relevante sobre la compensación de los empleados en función de su puesto.
+* Objetivo: Calcular y proporcionar estadísticas salariales (promedio, máximo y mínimo) de un puesto específico dentro de una empresa.
+* Tablas Compuestas: El procedimiento afecta a la tabla empleados.
 
+```
+CALL sp_puesto('Gerente de Ventas', @promedio, @mayor, @menor);
+SELECT @promedio AS Promedio, @mayor AS Mayor, @menor AS Menor;
 ```
 ## Documentacion de Función
 
