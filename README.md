@@ -129,13 +129,15 @@ ________________________________________
 * *compras_proveedores*: Registra información sobre las compras a proveedores, incluyendo el monto total de la compra, útil para el análisis de costos y gastos.
 * *detalles_compras_proveedores*: Almacena detalles sobre los productos comprados, como cantidad y precio, que son importantes para el análisis de costos de compras y gestión de inventario.
 
-### *Tablas Transaccionales* * Almacenan datos relacionados con transacciones o eventos específicos:
+### *Tablas Transaccionales* 
+*Almacenan datos relacionados con transacciones o eventos específicos*:
 
 * *pedidos*: Registra cada pedido realizado por los clientes, incluyendo el cliente, el método de pago y el empleado, lo cual representa una transacción comercial específica.
 * *comentario_cliente*: Contiene los comentarios realizados por los clientes, reflejando interacciones y feedback en una transacción específica.
 * *devolucion_cliente*: Aunque también puede ser considerada una tabla de hechos debido a su contenido, registra transacciones de devoluciones, que es un tipo de transacción específica.
 
-### *Tablas de Soporte o Referencia* * Estas tablas proporcionan datos de referencia que son utilizados por las tablas de hechos y transaccionales:
+### *Tablas de Soporte o Referencia* 
+*Estas tablas proporcionan datos de referencia que son utilizados por las tablas de hechos y transaccionales*:
 
 * *clientes*: Contiene información sobre los clientes, usada en las transacciones y análisis.
 * *proveedores*: Almacena información sobre los proveedores, utilizada en las transacciones de compras.
