@@ -118,9 +118,36 @@ ________________________________________
 * Almacena detalles de compras a proveedores con referencias a Compras_Proveedores y Productos.
 * Columnas: id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_unitario.
 
-* Estas tablas están diseñadas para capturar de manera estructurada todos los aspectos operativos y transaccionales de una ferretería, facilitando así el análisis y la gestión de datos relevantes para la toma de decisiones empresariales.
+## clasificación de las tablas en *tablas de hechos* y *tablas transaccionales*:
 
-* Bosquejo simplificado del modelo entidad-relación (E-R). Este bosquejo representa las entidades principales y sus relaciones clave de manera visual:
+### *Tablas de Hechos*
+* Suelen contener datos que son utilizados para el análisis y reporting:
+
+* *facturas*: Registra el monto total de las facturas emitidas, lo cual es un dato clave para el análisis financiero y de ventas.
+* *detalle_pedidos*: Almacena los detalles de los productos en cada pedido, incluyendo cantidad y precio, lo que es crucial para el análisis de ventas y gestión de inventario.
+* *devolucion_cliente*: Contiene datos sobre las devoluciones de productos, como cantidad y motivo, que son importantes para el análisis de devoluciones y satisfacción del cliente.
+* *compras_proveedores*: Registra información sobre las compras a proveedores, incluyendo el monto total de la compra, útil para el análisis de costos y gastos.
+* *detalles_compras_proveedores*: Almacena detalles sobre los productos comprados, como cantidad y precio, que son importantes para el análisis de costos de compras y gestión de inventario.
+
+### *Tablas Transaccionales*
+* Almacenan datos relacionados con transacciones o eventos específicos:
+
+* *pedidos*: Registra cada pedido realizado por los clientes, incluyendo el cliente, el método de pago y el empleado, lo cual representa una transacción comercial específica.
+* *comentario_cliente*: Contiene los comentarios realizados por los clientes, reflejando interacciones y feedback en una transacción específica.
+* *devolucion_cliente*: Aunque también puede ser considerada una tabla de hechos debido a su contenido, registra transacciones de devoluciones, que es un tipo de transacción específica.
+
+### *Tablas de Soporte o Referencia*
+* Estas tablas proporcionan datos de referencia que son utilizados por las tablas de hechos y transaccionales:
+
+* *clientes*: Contiene información sobre los clientes, usada en las transacciones y análisis.
+* *proveedores*: Almacena información sobre los proveedores, utilizada en las transacciones de compras.
+* *empleados*: Registra datos sobre los empleados, utilizados en pedidos y facturación.
+* *departamentos*: Contiene información sobre los departamentos, usada para organizar empleados.
+* *metodo_pago*: Almacena los métodos de pago disponibles, utilizados en pedidos.
+* *categoria_producto*: Contiene las categorías de productos, usadas en la tabla de productos.
+* *productos*: Aunque principalmente es una tabla de referencia, se relaciona con las transacciones de ventas y compras.
+
+* Bosquejo simplificado del modelo entidad-relación (E-R).
 ```
   +-------------------+        +---------------------+       +-----------------+
   |     Clientes      |        |     Empleados        |       |   Proveedores   |
