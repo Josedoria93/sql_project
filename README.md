@@ -118,9 +118,10 @@ ________________________________________
 * Almacena detalles de compras a proveedores con referencias a Compras_Proveedores y Productos.
 * Columnas: id_detalle_compra, id_compra_proveedor, id_producto, cantidad, precio_unitario.
 
-## clasificación de las tablas en *tablas de hechos* y *tablas transaccionales*:
+## Clasificación de las tablas en *tablas de hechos* y *tablas transaccionales*:
 
-### *Tablas de Hechos* * Suelen contener datos que son utilizados para el análisis y reporting:
+### *Tablas de Hechos* 
+*Suelen contener datos que son utilizados para el análisis y reporting*:
 
 * *facturas*: Registra el monto total de las facturas emitidas, lo cual es un dato clave para el análisis financiero y de ventas.
 * *detalle_pedidos*: Almacena los detalles de los productos en cada pedido, incluyendo cantidad y precio, lo que es crucial para el análisis de ventas y gestión de inventario.
