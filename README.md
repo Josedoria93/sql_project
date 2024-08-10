@@ -265,12 +265,12 @@ SELECT * FROM empresa_ferretera.productos_stock_bajo;
 CALL sp_ventas_producto(5);
 ```
 2. **Nombre del Procedimiento Almacenado: sp_agregar_cliente**
-* Descripción: El procedimiento almacenado sp_agregar_cliente se utiliza para insertar nuevos registros en la tabla clientes.  
-* Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes.
-* Tablas Compuestas: El procedimiento afecta a la tabla clientes.
+* Descripción: El procedimiento almacenado sp_agregar_cliente se utiliza para insertar nuevos registros en las tablas clientes y direcciones_cliente.
+* Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes y direcciones_cliente.
+* Tablas Compuestas: El procedimiento afecta a las tablas clientes y direcciones_cliente.
 
 ```
-CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com');
+CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com', '123 Calle Principal, Springfield');
 ```
 3. **Nombre del Procedimiento Almacenado: sp_puesto**
 * Descripción: Permite a los responsables de recursos humanos, finanzas o administración obtener información rápida y relevante sobre la compensación de los empleados en función de su puesto.
