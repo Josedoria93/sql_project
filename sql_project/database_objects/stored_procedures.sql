@@ -5,6 +5,7 @@ DROP PROCEDURE IF EXISTS sp_agregar_cliente;
 Drop procedure IF EXISTS sp_puesto;
 
 -- Crear el Procedimiento Almacenado sp_ventas_producto
+
 DELIMITER //
 CREATE PROCEDURE `sp_ventas_producto`( IN producto_id INT)
 BEGIN
@@ -15,21 +16,34 @@ BEGIN
 END //
 DELIMITER ;
 
--- Crear el Procedimiento Almacenado sp_agregar_cliente
+-- Crear el Procedimiento para añadir un nuevo cliente
+
 DELIMITER //
--- Sp para agregar un Cliente Nuevo
 CREATE PROCEDURE sp_agregar_cliente(
     IN p_nombre VARCHAR(100),
     IN p_telefono VARCHAR(20),
-    IN p_email VARCHAR(100)
+    IN p_email VARCHAR(100),
+    IN p_direccion TEXT
 )
 BEGIN
+    -- Declarar una variable para almacenar el ID del cliente recién insertado
+    DECLARE v_id_cliente INT;
+
+    -- Insertar el nuevo cliente en la tabla clientes
     INSERT INTO clientes (nombre, telefono, email)
     VALUES (p_nombre, p_telefono, p_email);
+    
+    -- Obtener el ID del cliente recién insertado
+    SET v_id_cliente = LAST_INSERT_ID();
+
+    -- Insertar la dirección en la tabla direcciones_clientes
+    INSERT INTO direcciones_clientes (id_cliente, direccion)
+    VALUES (v_id_cliente, p_direccion);
 END //
 DELIMITER ;
 
 -- Procedimiento Almacenado para obtener estadísticas salariales de un puesto
+
 DELIMITER //
 CREATE PROCEDURE sp_puesto(
     IN p_puesto VARCHAR(100), 
