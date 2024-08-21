@@ -265,7 +265,7 @@ SELECT * FROM empresa_ferretera.productos_stock_bajo;
 CALL sp_ventas_producto(5);
 ```
 2. **Nombre del Procedimiento Almacenado: sp_agregar_cliente**
-* Descripción: El procedimiento almacenado sp_agregar_cliente se utiliza para insertar nuevos registros en las tablas clientes y direcciones_cliente.
+* Descripción: Se utiliza para insertar nuevos registros en las tablas clientes y direcciones_cliente.
 * Objetivo: Simplificar y centralizar el proceso de inserción de nuevos clientes en la base de datos, garantizando que los datos se inserten correctamente en la tabla clientes y direcciones_cliente.
 * Tablas Compuestas: El procedimiento afecta a las tablas clientes y direcciones_cliente.
 
@@ -280,6 +280,14 @@ CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com
 ```
 CALL sp_puesto('Sales Manager', @promedio, @mayor, @menor);
 SELECT @promedio AS Promedio, @mayor AS Mayor, @menor AS Menor;
+```
+4. **Nombre del Procedimiento Almacenado: sp_listar_productos_categoria**
+* Descripción: Permite a los usuarios o aplicaciones filtrar productos por categoría de manera eficiente.
+* Objetivo: Recuperar y mostrar información sobre productos que pertenecen a una categoría específica.
+* Tablas Compuestas: categoria_producto y productos.
+
+```
+CALL sp_listar_productos_categoria('Herramientas');
 ```
 ## Documentacion de Función
 
