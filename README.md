@@ -246,6 +246,8 @@ ________________________________________
 ```
 INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...), (valor1, valor2, ...), ...;
 ```
+[![INSERT-INTO.png](https://i.postimg.cc/DfWhkMjh/INSERT-INTO.png)](https://postimg.cc/K4ywtJhp)
+
 **Proceso de Importación**:
 
 * *Ejecución de Comandos*: Los comandos SQL se ejecutan a través de una herramienta de administración de bases de datos (MySQL Workbench). Estos comandos son procesados por el sistema de gestión de bases de datos (SGBD), el cual inserta los registros en las tablas correspondientes.
