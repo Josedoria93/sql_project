@@ -356,7 +356,7 @@ CALL sp_listar_productos_categoria('Herramientas');
 ```
 SELECT total_compras_proveedor(5) AS total_compras;
 ```
-[![Funci-n.png](https://i.postimg.cc/1ztbLCBq/Funci-n.png)](https://postimg.cc/VJx7tF3f)
+[![FX.png](https://i.postimg.cc/j2KcrCTF/FX.png)](https://postimg.cc/k61KQJBQ)
 
 ## Documentacion de los Trigger
 
