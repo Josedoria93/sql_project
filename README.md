@@ -149,7 +149,7 @@ ________________________________________
 * *categoria_producto*: Contiene las categorías de productos, usadas en la tabla de productos.
 * *productos*: Aunque principalmente es una tabla de referencia, se relaciona con las transacciones de ventas y compras.
 
-* Bosquejo simplificado del modelo entidad-relación (E-R).
+### Bosquejo simplificado del modelo entidad-relación (E-R).
 ```
   +-------------------+        +---------------------+       +-----------------+
   |     Clientes      |        |     Empleados        |       |   Proveedores   |
