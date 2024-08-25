@@ -251,6 +251,8 @@ INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...),
 * *Ejecución de Comandos*: Los comandos SQL se ejecutan a través de una herramienta de administración de bases de datos (MySQL Workbench). Estos comandos son procesados por el sistema de gestión de bases de datos (SGBD), el cual inserta los registros en las tablas correspondientes.
 
 * *Verificación*: Después de ejecutar los comandos, se realiza una verificación para asegurar que los datos se hayan importado correctamente. Esto puede implicar consultas SQL de prueba para comprobar que los datos están presentes y correctos en las tablas.
+
+[![Captura-de-pantalla-2024-08-24-192821.png](https://i.postimg.cc/V6VKW4nB/Captura-de-pantalla-2024-08-24-192821.png)](https://postimg.cc/dkGRq2WL)
   
 **Beneficios del Método**:
 
