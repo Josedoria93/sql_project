@@ -354,7 +354,7 @@ SELECT total_compras_proveedor(5) AS total_compras;
 * Objetivo: Mantener actualizado el inventario en la base de datos de manera automática cuando se registra una nueva compra de productos a proveedores. 
 * Tablas Compuestas: detalles_compras_proveedores y inventario.
 _______________________________________
-**BACKUP | DUMP**:
+## BACKUP | DUMP:
 * Realizar copias de seguridad (backups) en MySQL es esencial para proteger la integridad de los datos y garantizar la continuidad del negocio.
 * El proyecto se ejecuto con MySQL Workbench, EXPORT TO DUMP PROJECT FOLDER que permite exportar una base de datos a un archivo autocontenido en formato SQL.
 
