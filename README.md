@@ -230,6 +230,8 @@ ________________________________________
   | estado_pago        |             | precio_unitario      |
   +-------------------+              +---------------------+
 ```
+[![Modelo-E-R.png](https://i.postimg.cc/L68XnvQy/Modelo-E-R.png)](https://postimg.cc/kDL9HNm8)
+
 ## Método de Importación de Datos en la Base de Datos *empresa_ferretera*
 
 * Para integrar la información en la base de datos empresa_ferretera, se ha empleado un método sistemático y eficiente de importación de datos utilizando comandos SQL. Este proceso asegura que los datos sean cargados correctamente en las tablas correspondientes, facilitando así la gestión y consulta de la información dentro del sistema. A continuación se detalla el método utilizado:
