@@ -230,7 +230,7 @@ ________________________________________
   | estado_pago        |             | precio_unitario      |
   +-------------------+              +---------------------+
 ```
-[![Modelo-E-R.png](https://i.postimg.cc/L68XnvQy/Modelo-E-R.png)](https://postimg.cc/kDL9HNm8)
+[![Modelo.png](https://i.postimg.cc/YSpyHGCm/Modelo.png)](https://postimg.cc/3kcZjwpK)
 
 ## Método de Importación de Datos en la Base de Datos *empresa_ferretera*
 
