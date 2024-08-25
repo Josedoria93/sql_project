@@ -1,4 +1,6 @@
 # Problema a Resolver: Optimización y Gestión Integral de Operaciones en una Ferretería
+
+[![Ferreteria.png](https://i.postimg.cc/59nz7XZR/Ferreteria.png)](https://postimg.cc/QVKVVdNQ)
 ________________________________________
 ## Introducción
 Una ferretería enfrenta múltiples desafíos operativos y estratégicos que requieren una gestión eficiente de datos para mejorar la rentabilidad, satisfacción del cliente y eficiencia operativa. La implementación de una base de datos bien estructurada juega un papel crucial en abordar estas problemáticas, proporcionando una plataforma centralizada para la gestión y análisis de datos críticos.
