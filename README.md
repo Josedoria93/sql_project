@@ -326,7 +326,8 @@ CALL sp_agregar_cliente('Aristoteles Perez', '575-1234', 'aris.perez@example.com
 CALL sp_puesto('Sales Manager', @promedio, @mayor, @menor);
 SELECT @promedio AS Promedio, @mayor AS Mayor, @menor AS Menor;
 ```
-[![Stored-Procedure.png](https://i.postimg.cc/SNSkNrNg/Stored-Procedure.png)](https://postimg.cc/MXFh91BB)
+[![Stored-Procedure.png](https://i.postimg.cc/kMcPZbFK/Stored-Procedure.png)](https://postimg.cc/pypS5ySL)
+
 4. **Nombre del Procedimiento Almacenado: sp_listar_productos_categoria**
 * Descripción: Permite a los usuarios o aplicaciones filtrar productos por categoría de manera eficiente.
 * Objetivo: Recuperar y mostrar información sobre productos que pertenecen a una categoría específica.
