@@ -347,6 +347,8 @@ CALL sp_listar_productos_categoria('Herramientas');
 ```
   SELECT total_ventas_cliente(1) AS total_ventas;
 ```
+[![Funci-n.png](https://i.postimg.cc/ZqZ1VYBV/Funci-n.png)](https://postimg.cc/3kSSwTZv)
+
 2. **Nombre de la Función: total_compras_proveedor**
 * Descripción: Esencial para gestionar la contabilidad de proveedores y para análisis de gastos relacionados con proveedores en sistemas de gestión de compras y finanzas.
 * Objetivo: Calcular el total de compras realizadas a un proveedor específico. 
@@ -354,6 +356,8 @@ CALL sp_listar_productos_categoria('Herramientas');
 ```
 SELECT total_compras_proveedor(5) AS total_compras;
 ```
+[![Funci-n.png](https://i.postimg.cc/1ztbLCBq/Funci-n.png)](https://postimg.cc/VJx7tF3f)
+
 ## Documentacion de los Trigger
 
 1. **Nombre del Trigger: after_insert_detalle_pedido**
