@@ -248,7 +248,7 @@ ________________________________________
 ```
 INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...), (valor1, valor2, ...), ...;
 ```
-[![INSERT-INTO.png](https://i.postimg.cc/DfWhkMjh/INSERT-INTO.png)](https://postimg.cc/K4ywtJhp)
+[![Modelo.png](https://i.postimg.cc/YSpyHGCm/Modelo.png)](https://postimg.cc/3kcZjwpK)
 
 **Proceso de Importación**:
 
