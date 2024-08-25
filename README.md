@@ -230,8 +230,35 @@ ________________________________________
   | estado_pago        |             | precio_unitario      |
   +-------------------+              +---------------------+
 ```
-## IMPORTACIÓN DE DATOS
+## Método de Importación de Datos en la Base de Datos *empresa_ferretera*
 
+* Para integrar la información en la base de datos empresa_ferretera, se ha empleado un método sistemático y eficiente de importación de datos utilizando comandos SQL. Este proceso asegura que los datos sean cargados correctamente en las tablas correspondientes, facilitando así la gestión y consulta de la información dentro del sistema. A continuación se detalla el método utilizado:
+  
+**Preparación de Datos**:
+
+* *Recopilación*: Los datos fueron recopilados y organizados en un formato que facilita su importación. Estos datos incluyen información sobre departamentos, categorías de productos, métodos de pago, clientes, proveedores y empleados.
+  
+* *Formato*: Los datos fueron estructurados en comandos SQL INSERT INTO, que son estándar para la inserción de registros en tablas de bases de datos relacionales. Cada comando especifica la tabla en la que se deben insertar los datos y los valores a ser insertados en las columnas correspondientes.
+
+**Estructura de Comandos SQL**:
+
+* *Comandos INSERT INTO*: Cada tabla en la base de datos tiene un conjunto de comandos SQL INSERT INTO. Estos comandos permiten agregar múltiples registros a la vez. El formato general es:
+```
+INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...), (valor1, valor2, ...), ...;
+```
+**Proceso de Importación**:
+
+* *Ejecución de Comandos*: Los comandos SQL se ejecutan a través de una herramienta de administración de bases de datos (MySQL Workbench). Estos comandos son procesados por el sistema de gestión de bases de datos (SGBD), el cual inserta los registros en las tablas correspondientes.
+
+* *Verificación*: Después de ejecutar los comandos, se realiza una verificación para asegurar que los datos se hayan importado correctamente. Esto puede implicar consultas SQL de prueba para comprobar que los datos están presentes y correctos en las tablas.
+  
+**Beneficios del Método**:
+
+* *Eficiencia*: La importación de datos mediante comandos SQL INSERT INTO permite agregar múltiples registros en una sola operación, lo que es más eficiente que insertar los datos uno por uno.
+
+* *Consistencia*: Al utilizar un formato estandarizado, se minimiza el riesgo de errores durante la importación. Esto garantiza que los datos se inserten de manera coherente y precisa.
+
+* *Facilidad de Actualización*: En el futuro, si es necesario actualizar o añadir más datos, se puede utilizar un enfoque similar para mantener la integridad y la estructura de la base de datos.
 _______________________________________
 # OBJETOS DE LA BASE DE DATOS:
 * Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
