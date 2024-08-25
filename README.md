@@ -250,7 +250,7 @@ ________________________________________
 ```
 INSERT INTO nombre_tabla (columna1, columna2, ...) VALUES (valor1, valor2, ...), (valor1, valor2, ...), ...;
 ```
-[![INSERT-INTO.png](https://i.postimg.cc/wvKrr6G1/INSERT-INTO.png)](https://postimg.cc/wtVFydHz)
+[![INSERT-INTO.png](https://i.postimg.cc/KcC5r9CY/INSERT-INTO.png)](https://postimg.cc/6TLRBhWs)
 
 **Proceso de Importación**:
 
