@@ -327,7 +327,6 @@ CALL sp_puesto('Sales Manager', @promedio, @mayor, @menor);
 SELECT @promedio AS Promedio, @mayor AS Mayor, @menor AS Menor;
 ```
 [![Stored-Procedure.png](https://i.postimg.cc/SNSkNrNg/Stored-Procedure.png)](https://postimg.cc/MXFh91BB)
-
 4. **Nombre del Procedimiento Almacenado: sp_listar_productos_categoria**
 * Descripción: Permite a los usuarios o aplicaciones filtrar productos por categoría de manera eficiente.
 * Objetivo: Recuperar y mostrar información sobre productos que pertenecen a una categoría específica.
