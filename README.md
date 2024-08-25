@@ -336,6 +336,8 @@ SELECT @promedio AS Promedio, @mayor AS Mayor, @menor AS Menor;
 ```
 CALL sp_listar_productos_categoria('Herramientas');
 ```
+[![Stored-Procedure.png](https://i.postimg.cc/KjVNVf9m/Stored-Procedure.png)](https://postimg.cc/8fRMfRQY)
+
 ## Documentacion de Función
 
 1. **Nombre de la Función: total_ventas_cliente**
