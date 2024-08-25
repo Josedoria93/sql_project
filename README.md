@@ -280,7 +280,7 @@ _______________________________________
 ```
 SELECT id_pedido,fecha_pedido,id_empleado FROM empresa_ferretera.pedidos_cliente_especifico;
 ```
-
+[![vista-pedidos-cliente-especifico.png](https://i.postimg.cc/jjj96DBT/vista-pedidos-cliente-especifico.png)](https://postimg.cc/HrfBdkpv)
 
 2. **Vista de Productos en Stock Bajo**
 * Descripción: La vista proporciona una lista de productos cuyo stock en inventario es inferior a un umbral predefinido.
