@@ -301,7 +301,7 @@ SELECT * FROM empresa_ferretera.productos_stock_bajo;
 ```  
 CALL sp_ventas_producto(5);
 ```
-
+[![Procedimiento-Almacenado.png](https://i.postimg.cc/cHCY7ZXz/Procedimiento-Almacenado.png)](https://postimg.cc/9R3rC33P)
 
 2. **Nombre del Procedimiento Almacenado: sp_agregar_cliente**
 * Descripción: Se utiliza para insertar nuevos registros en las tablas clientes y direcciones_cliente.
