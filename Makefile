@@ -22,7 +22,7 @@ all: info up objects
 
 info:
 	@echo "This is a project for $(DATABASE)"
-	
+	@echo "Database: $(DATABASE)"
 
 up:
 	@echo "Create the instance of docker"
@@ -53,9 +53,8 @@ access-db:
 
 backup-db:
 	@echo "Back up database by structure and data"
-	# Dump MySQL database to a file
-	# para que te permita descargar con procedimientos
-	docker exec -it $(SERVICE_NAME) mysqldump --routines=true  -u root -p$(PASSWORD) $(DATABASE) > ./back-up/$(DATABASE)-backup.sql
+	@mkdir -p ./back-up
+	docker exec -it $(SERVICE_NAME) mysqldump --routines=true -u root -p$(PASSWORD) "$(DATABASE)" > "./back-up/$(DATABASE)-backup.sql"
 
 down:
 	@echo "Remove the Database"
