@@ -1,4 +1,9 @@
 # Problema a Resolver: Optimización y Gestión Integral de Operaciones en una Ferretería
+## Alumno: Jose Luis Doria Petro
+## Curso: SQL
+## Comisión: 57190
+## Profesor: Anderson Michel Torres
+## Tutor: Ariel Annone
 
 [![Ferreteria.png](https://i.postimg.cc/59nz7XZR/Ferreteria.png)](https://postimg.cc/QVKVVdNQ)
 ________________________________________
