@@ -395,11 +395,10 @@ _______________________________________
 
 [![Quinto-Paso.png](https://i.postimg.cc/VkxWcRX6/Quinto-Paso.png)](https://postimg.cc/DScXr1jk)
 
-* make test-db: Mirar los datos de cada tabla
-* make access-db: Acceder a la base de datos
-* make backup-db: Realizar un backup de mi base de datos
-* make clean-db: Limpiar la base de datos
-
+* make test-db: Este comando se utiliza para ver los datos de cada tabla en la base de datos. Es útil para verificar que los datos se están almacenando correctamente.
+* make access-db: Con este comando, puedes acceder a la base de datos. Te permite interactuar directamente con la base de datos para realizar consultas o modificaciones.
+* make backup-db: Este comando realiza un respaldo de la base de datos. Es esencial para asegurar que no se pierdan datos importantes en caso de algún fallo.
+* make clean-db: Utilizar este comando para limpiar la base de datos. Esto puede incluir eliminar datos temporales o innecesarios para mantener la base de datos ordenada y eficiente.
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
