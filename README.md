@@ -395,6 +395,11 @@ _______________________________________
 
 [![Quinto-Paso.png](https://i.postimg.cc/VkxWcRX6/Quinto-Paso.png)](https://postimg.cc/DScXr1jk)
 
+* make test-db: Mirar los datos de cada tabla
+* make access-db: Acceder a la base de datos
+* make backup-db: Realizar un backup de mi base de datos
+* make clean-db: Limpiar la base de datos
+
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
