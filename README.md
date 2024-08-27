@@ -378,6 +378,25 @@ _______________________________________
 
 [![Export-Completed.png](https://i.postimg.cc/GtBTvxxD/Export-Completed.png)](https://postimg.cc/q6T7TnYB)
 _______________________________________
+
+## CORRER EL CÓDIGO EN EL CONTENEDOR (CODESPACE):
+
+```
+[![Primer-paso.png](https://i.postimg.cc/wvcV2myB/Primer-paso.png)](https://postimg.cc/phrzXyBN)
+```
+```
+[![Segundo-Paso.png](https://i.postimg.cc/Y2RRmQBn/Segundo-Paso.png)](https://postimg.cc/QVB129t1)
+```
+```
+[![Tercer-Paso.png](https://i.postimg.cc/tCg5d7XX/Tercer-Paso.png)](https://postimg.cc/pygzRWh7)
+```
+```
+[![Cuarto-Paso.png](https://i.postimg.cc/dVkjXXkp/Cuarto-Paso.png)](https://postimg.cc/NKtX2dxk)
+```
+```
+[![Quinto-Paso.png](https://i.postimg.cc/VkxWcRX6/Quinto-Paso.png)](https://postimg.cc/DScXr1jk)
+```
+_______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
 * Mejora en la satisfacción y retención de clientes a través de un mejor servicio y personalización.
