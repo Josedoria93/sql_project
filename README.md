@@ -300,6 +300,13 @@ SELECT * FROM empresa_ferretera.productos_stock_bajo;
 ```
 [![Vista-de-Productos-en-Stock-Bajo.png](https://i.postimg.cc/pdXN0Ghg/Vista-de-Productos-en-Stock-Bajo.png)](https://postimg.cc/TKSH1cc9)
 
+3. **vista_pedidos_empleado_estado_pago**
+* Descripción: La vista muestra el número total de pedidos gestionados por cada empleado, el total de ventas generadas y el método de pago utilizado. 
+* Objetivo: Proporcionar un resumen de las ventas realizadas por cada empleado, agrupado por el método de pago utilizado en los pedidos.
+* Tablas Compuestas: empleados, pedidos, facturas y metodo_pago.
+```
+SELECT * FROM vista_pedidos_empleado_estado_pago;
+```
 ## Documentacion de Procedimientos Almacenados
 
 1. **Nombre del Procedimiento Almacenado: sp_ventas_producto**
