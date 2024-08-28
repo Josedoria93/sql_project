@@ -11,15 +11,16 @@ DROP VIEW IF EXISTS vista_pedidos_empleado_estado_pago
 
        
 -- Crear la vista productos_stock_bajo
-CREATE OR REPLACE VIEW productos_stock_bajo AS
+CREATE VIEW productos_stock_bajo AS
 SELECT 
-       p.id_producto, 
-       p.nombre, 
-       i.cantidad_stock
+    p.id_producto, 
+    p.nombre, 
+    i.cantidad_stock
 FROM productos p
 JOIN inventario i 
-     ON p.id_producto = i.id_producto
+    ON p.id_producto = i.id_producto
 WHERE i.cantidad_stock < 250;
+
 
 -- Crear la vista pedidos_cliente_especifico
 CREATE OR REPLACE VIEW pedidos_cliente_especifico AS
