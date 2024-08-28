@@ -441,6 +441,7 @@ _______________________________________
 ```
 SELECT User, Host FROM mysql.user;
 ```
+[![Roles.png](https://i.postimg.cc/X7HT8Pmt/Roles.png)](https://postimg.cc/SJ9TQgyG)
 
 ### Para ver la instrucción SQL que se usó para crear el usuario 'josedp'@'%', ejecuta el siguiente comando en MySQL 8.0.
 ```
