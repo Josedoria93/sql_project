@@ -1,38 +1,33 @@
 USE empresa_ferretera;
 
--- Crearemos 1 rol que tiene todos los permisos
-
+-- Crear el rol DBA con todos los permisos
 DROP ROLE IF EXISTS 'DBA';
 CREATE ROLE 'DBA';
 
--- Se Otorgan los permisos
-
--- ROL DBA
--- Todos los permisos
+-- Otorgar todos los permisos al rol DBA
 GRANT ALL PRIVILEGES ON empresa_ferretera.* TO 'DBA';
 
--- Creación de usuarios
-	
--- DBA
-DROP USER IF EXISTS
-	'josedp'@'%',
-	
+-- Crear el usuario con la contraseña especificada
+DROP USER IF EXISTS 'josedp'@'%';
+CREATE USER 'josedp'@'%' IDENTIFIED BY '1594';
 
-CREATE USER 'josedp'@'%' IDENTIFIED BY '1594'
-	FAILED_LOGIN_ATTEMPTS 4
-	PASSWORD_LOCK_TIME 3
-	PASSWORD EXPIRE INTERVAL 200 DAY;
+-- Configurar políticas de seguridad para el usuario
 
--- Se Otorgan los roles
+-- Configurar el número máximo de intentos fallidos de inicio de sesión
+ALTER USER 'josedp'@'%' FAILED_LOGIN_ATTEMPTS 4;
 
-GRANT 'DBA' TO
-	'josedp'@'%';
+-- Configurar la expiración de la contraseña
+ALTER USER 'josedp'@'%' PASSWORD EXPIRE INTERVAL 30 DAY;
 
--- Activación de roles por defecto
+-- Configurar el tiempo de bloqueo de la cuenta después de fallar los intentos de inicio de sesión
+ALTER USER 'josedp'@'%' PASSWORD_LOCK_TIME 3;
 
-SET DEFAULT ROLE 'DBA'
-	TO 'josedp'@'%';
+-- Otorgar el rol DBA al usuario
+GRANT 'DBA' TO 'josedp'@'%';
 
--- Actualización de privilegios
+-- Establecer el rol DBA como el rol por defecto para el usuario
+SET DEFAULT ROLE 'DBA' TO 'josedp'@'%';
 
+-- Actualizar los privilegios
 FLUSH PRIVILEGES;
+
