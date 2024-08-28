@@ -435,6 +435,12 @@ _______________________________________
 
 * Asignación de Rol: Asigna el rol DBA al usuario josedp y establece este rol como el predeterminado.
 * Actualización de Privilegios: Asegura que todos los cambios de permisos sean aplicados.
+
+### Consultar la Tabla de Usuarios
+* Una vez que estés en MySQL, puedes usar la siguiente consulta para ver todos los usuarios:
+```
+SELECT User, Host FROM mysql.user;
+```
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
