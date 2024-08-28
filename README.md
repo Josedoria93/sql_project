@@ -464,8 +464,11 @@ PASSWORD REQUIRE CURRENT DEFAULT
 FAILED_LOGIN_ATTEMPTS 4 
 PASSWORD_LOCK_TIME 3;
 ```
-
-_______________________________________
+### Comando 'localhost':
+```
+mysql -u josedp -p -h 127.0.0.1 -P 3306
+```
+_____________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
 * Mejora en la satisfacción y retención de clientes a través de un mejor servicio y personalización.
