@@ -442,7 +442,7 @@ _______________________________________
 SELECT User, Host FROM mysql.user;
 ```
 
-## Para ver la instrucción SQL que se usó para crear el usuario 'josedp'@'%', ejecuta el siguiente comando en MySQL:
+### Para ver la instrucción SQL que se usó para crear el usuario 'josedp'@'%', ejecuta el siguiente comando en MySQL:
 ```
 SHOW CREATE USER 'josedp'@'%';
 ```
