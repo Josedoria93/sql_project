@@ -7,7 +7,7 @@ DROP VIEW IF EXISTS productos_stock_bajo;
 DROP VIEW IF EXISTS pedidos_cliente_especifico;
 
 -- Eliminar la vista vista_pedidos_empleado_estado_pago
-DROP VIEW IF EXISTS vista_pedidos_empleado_estado_pago
+DROP VIEW IF EXISTS vista_pedidos_empleado_estado_pago;
 
        
 -- Crear la vista productos_stock_bajo
