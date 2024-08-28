@@ -9,7 +9,7 @@ CREATE ROLE 'DBA';
 
 -- ROL DBA
 -- Todos los permisos
-GRANT ALL PRIVILEGES ON repositor_ruedas.* TO 'DBA';
+GRANT ALL PRIVILEGES ON empresa_ferretera.* TO 'DBA';
 
 -- Creación de usuarios
 	
