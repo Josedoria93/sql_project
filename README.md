@@ -426,6 +426,16 @@ make backup-db
 make clean-db
 ```
 _______________________________________
+## ROLES Y USUARIOS
+* Base de Datos Seleccionada: empresa_ferretera para las operaciones.
+* Rol DBA: Se crea un rol DBA con todos los permisos sobre empresa_ferretera.
+* Usuario josedp: Se crea un nuevo usuario josedp con una política de seguridad configurada.
+```
+  [![Alter-User.png](https://i.postimg.cc/nhqC7qwj/Alter-User.png)](https://postimg.cc/K1vGh3bx)
+```
+* Asignación de Rol: Asigna el rol DBA al usuario josedp y establece este rol como el predeterminado.
+* Actualización de Privilegios: Asegura que todos los cambios de permisos sean aplicados.
+_______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
 * Mejora en la satisfacción y retención de clientes a través de un mejor servicio y personalización.
