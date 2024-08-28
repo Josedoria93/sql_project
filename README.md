@@ -441,6 +441,29 @@ _______________________________________
 ```
 SELECT User, Host FROM mysql.user;
 ```
+
+## Para ver la instrucción SQL que se usó para crear el usuario 'josedp'@'%', ejecuta el siguiente comando en MySQL:
+```
+SHOW CREATE USER 'josedp'@'%';
+```
+
+* La salida del comando podría verse algo así:
+
+```
+CREATE USER 'josedp'@'%' 
+IDENTIFIED WITH 'caching_sha2_password' 
+AS '$A$005$\\nmz{Da[2(QoSM1Y7nvRr8AHWsguKpRe193HTYlIQDDh1k/maq16HUq61oWC' 
+DEFAULT ROLE `DBA`@`%` 
+REQUIRE NONE 
+PASSWORD EXPIRE INTERVAL 30 DAY 
+ACCOUNT UNLOCK 
+PASSWORD HISTORY DEFAULT 
+PASSWORD REUSE INTERVAL DEFAULT 
+PASSWORD REQUIRE CURRENT DEFAULT 
+FAILED_LOGIN_ATTEMPTS 4 
+PASSWORD_LOCK_TIME 3;
+```
+
 _______________________________________
 ## Beneficios Esperados
 * Mejora en la precisión y eficiencia en la gestión de inventarios.
