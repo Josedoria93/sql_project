@@ -89,7 +89,7 @@ DELIMITER //
 
 -- Creación del procedimiento almacenado 
 CREATE PROCEDURE sp_listar_productos_categoria(
-    IN categoria_nombre VARCHAR(100),  -- Parámetro de entrada que recibe el nombre de la categoría
+    IN categoria_nombre VARCHAR(100),  
     OUT p_mensaje VARCHAR(100)
 )
 BEGIN
