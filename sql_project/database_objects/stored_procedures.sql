@@ -5,8 +5,9 @@ DROP PROCEDURE IF EXISTS sp_ventas_producto;
 DROP PROCEDURE IF EXISTS sp_agregar_cliente;
 DROP PROCEDURE IF EXISTS sp_puesto;
 DROP PROCEDURE IF EXISTS sp_listar_productos_categoria;
+DROP PROCEDURE IF EXISTS sp_listar_direcciones_cliente;
 
--- Crear el Procedimiento Almacenado sp_ventas_producto
+-- 1.0 Crear el Procedimiento Almacenado sp_ventas_producto
 
 -- Cambiar el delimitador temporalmente 
 DELIMITER //
@@ -20,7 +21,7 @@ END //
 -- Restaurar el delimitador 
 DELIMITER ;
 
--- Crear el Procedimiento para añadir un nuevo cliente
+-- 2.0 Crear el Procedimiento para añadir un nuevo cliente
 
 -- Cambiar el delimitador temporalmente 
 DELIMITER //
@@ -48,7 +49,7 @@ END //
 -- Restaurar el delimitador 
 DELIMITER ;
 
--- Procedimiento Almacenado para obtener estadísticas salariales de un puesto
+-- 3.0 Procedimiento Almacenado para obtener estadísticas salariales de un puesto
 
 -- Cambiar el delimitador temporalmente 
 DELIMITER //
@@ -81,7 +82,7 @@ END //
 DELIMITER ;
 
 
--- Crear el Procedimiento Almacenado sp_listar_productos_categoria:
+-- 4.0 Crear el Procedimiento Almacenado sp_listar_productos_categoria:
 
 -- Cambiar el delimitador temporalmente 
 DELIMITER //
@@ -120,6 +121,46 @@ END //
 -- Restaurar el delimitador 
 DELIMITER ;
 
--- Llamar al procedimiento almacenado 
-CALL sp_listar_productos_categoria('Herramientas');
+-- 5.0 Procedimiento para listar todas las direcciones de un cliente específico.
+
+-- Cambiar el delimitador para definir el procedimiento almacenado
+DELIMITER //
+
+-- Crear el procedimiento almacenado
+CREATE PROCEDURE sp_listar_direcciones_cliente(
+    IN cliente_id INT,
+    OUT p_mensaje VARCHAR(100)
+)
+BEGIN
+		DECLARE v_cliente VARCHAR(100);
+        
+        -- Inicializar el mensaje
+		SET p_mensaje = '';
+    
+		-- Verificar si el cliente existe
+		SELECT nombre INTO v_cliente
+		FROM clientes
+		WHERE id_cliente = cliente_id;
+    
+    IF v_cliente IS NULL THEN
+		SET p_mensaje = 'No se encontró cliente con el ID proporcionado.';
+	ELSE
+		
+        -- Seleccionar el nombre y las direcciones del cliente específico
+		SELECT 	c.nombre AS Nombre,
+				dc.direccion AS Direccion
+		FROM direcciones_clientes dc 
+		JOIN clientes c
+			 ON dc.id_cliente = c.id_cliente
+		WHERE c.id_cliente = cliente_id;
+	END IF;
+		
+        -- Si hay un mensaje, devolverlo
+	IF p_mensaje != '' THEN
+        SELECT p_mensaje AS Mensaje;
+    END IF;
+END //
+-- Restaurar el delimitador 
+DELIMITER ;
+
 
