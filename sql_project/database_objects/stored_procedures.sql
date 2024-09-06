@@ -89,13 +89,17 @@ DELIMITER //
 
 -- Creación del procedimiento almacenado 
 CREATE PROCEDURE sp_listar_productos_categoria(
-    IN categoria_nombre VARCHAR(100)  -- Parámetro de entrada que recibe el nombre de la categoría
+    IN categoria_nombre VARCHAR(100),  -- Parámetro de entrada que recibe el nombre de la categoría
+    OUT p_mensaje VARCHAR(100)
 )
 BEGIN
     -- Declaración de una variable local para almacenar el ID de la categoría
     DECLARE v_categoria_id INT;
     
-    -- Seleccionar el ID de la categoría basada en el nombre proporcionado y almacenar el valor en v_categoria_id
+    -- Inicializar el mensaje
+    SET p_mensaje = '';
+    
+    -- Selecciona ID de la categoría basada en el nombre proporcionado 
     SELECT id_categoria INTO v_categoria_id
     FROM categoria_producto
     WHERE nombre_categoria = categoria_nombre;
@@ -103,7 +107,7 @@ BEGIN
     -- Verificar si se encontró una categoría con el nombre proporcionado
     IF v_categoria_id IS NULL THEN
         -- Si no se encontró, seleccionar un mensaje indicando que la categoría no fue encontrada
-        SELECT 'No se encontró la categoría con el nombre proporcionado.' AS Mensaje;
+        SET p_mensaje = 'No se encontró la categoría con el nombre proporcionado.';
     ELSE
         -- Si se encontró la categoría, seleccionar la información de los productos asociados a esa categoría
         SELECT 
@@ -112,9 +116,14 @@ BEGIN
             p.precio_unitario AS Precio_Unitario,  
             c.nombre_categoria AS Categoria  
         FROM productos p
-        LEFT JOIN categoria_producto c
+        INNER JOIN categoria_producto c
             ON p.id_categoria = c.id_categoria  
         WHERE c.id_categoria = v_categoria_id;  
+    END IF;
+    
+    -- Si hay un mensaje, devolverlo
+    IF p_mensaje != '' THEN
+        SELECT p_mensaje AS Mensaje;
     END IF;
 END //
 
